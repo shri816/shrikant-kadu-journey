@@ -274,7 +274,7 @@
         .horizontal-scroller::-webkit-scrollbar-thumb { background-color: var(--border); border-radius: 20px; }
 
         .philosophy-card {
-            flex: 0 0 320px;
+            flex: 0 0 360px; /* WIDENED to 360px to fit text */
             scroll-snap-align: center;
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -297,6 +297,7 @@
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--text-main);
+            white-space: nowrap; /* FORCES SINGLE LINE */
         }
 
         .philosophy-card p {
@@ -504,7 +505,7 @@
             <h1>I build products that<br>make life easier.</h1>
             <p class="tagline">Product leader with range, not narrow specialization.</p>
             <p class="description">
-                From viral consumer apps to billion-dollar fintech platforms to marketplace infrastructure at scale, I've deliberately sought out different types of hard problems across three continents to build adaptability, not just expertise in one domain.
+                From viral consumer apps to billion-dollar fintech platforms to marketplace infrastructure at scale. I solve hard problems across three continents.
             </p>
 
             <div class="companies">
@@ -564,17 +565,17 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">My Journey</h2>
-                <p class="section-subtitle">Building range through diverse problems across geographies and product stages.</p>
+                <p class="section-subtitle">Building range through diverse problems across geographies and stages.</p>
             </div>
 
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-date">2024 - 2025</span>
+                    <span class="timeline-date">2024 - Present</span>
                     <div class="timeline-content">
                         <h3>Product Lead</h3>
                         <div class="timeline-company">DoorDash (Wolt) • Berlin, Germany</div>
-                        <p class="timeline-desc">Leading category expansion beyond food delivery. Grocery, drone delivery, and new verticals in global markets.</p>
+                        <p class="timeline-desc">Lead category expansion beyond food delivery. Grocery, drone delivery, and new verticals in global markets.</p>
                         <div class="tags">
                             <span class="tag">Global Markets</span>
                             <span class="tag">New Verticals</span>
@@ -588,7 +589,7 @@
                     <div class="timeline-content">
                         <h3>Director of Product</h3>
                         <div class="timeline-company">Paytm • Bangalore, India</div>
-                        <p class="timeline-desc">Owned credit card products driving billions in GMV. Built a team of 4 PMs and navigated complex banking regulations.</p>
+                        <p class="timeline-desc">Owned credit card products driving billions in GMV. Built a team of 7 PMs and navigated complex banking regulations.</p>
                         <div class="tags">
                             <span class="tag">Fintech</span>
                             <span class="tag">Leadership</span>
@@ -736,7 +737,7 @@
             <div class="contact-layout">
                 <div>
                     <p style="margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.7;">
-                        Whether you're looking for a product leader, want to collaborate, or just chat over a coffee.
+                        Whether you're looking for a product leader, want to collaborate, or just chat about the industry.
                     </p>
                     <a href="mailto:shri.kadu13@gmail.com" class="contact-item">
                         <span class="contact-icon">📧</span>

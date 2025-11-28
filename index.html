@@ -103,6 +103,7 @@
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: var(--text-main);
         }
 
         /* ------------------------- 🏗️ GENERAL LAYOUT ------------------------- */
@@ -463,10 +464,16 @@
             .hero h1 { font-size: 2.5rem; }
             .cta-group { flex-direction: column; }
             .contact-layout { grid-template-columns: 1fr; }
-            nav ul { display: none; }
+            
+            /* Hidden by default on mobile */
+            nav ul { 
+                display: none; 
+            }
+            
             .mobile-menu-btn { display: block; }
             .horizontal-scroller { padding-right: 2rem; }
             
+            /* Show when class 'mobile-open' is added */
              nav ul.mobile-open {
                 display: flex;
                 flex-direction: column;
@@ -490,7 +497,9 @@
     <nav>
         <div class="container">
             <a href="#" class="logo">Shrikant Kadu</a>
-            <button class="mobile-menu-btn" onclick="document.getElementById('nav-menu').classList.toggle('mobile-open')">☰</button>
+            
+            <button class="mobile-menu-btn" id="menuToggle">☰</button>
+            
             <ul id="nav-menu">
                 <li><a href="#philosophy">Philosophy</a></li>
                 <li><a href="#journey">Journey</a></li>
@@ -798,27 +807,62 @@
     </footer>
 
     <script>
-        // Nav Active State on Scroll
-        const sections = document.querySelectorAll('section');
-        const navLi = document.querySelectorAll('nav ul li a');
+        // --- 1. Menu Interactions (Toggle & Close on Click Outside) ---
+        const menuBtn = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('#nav-menu a');
 
+        // Toggle menu when button is clicked
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-open');
+        });
+
+        // Close menu when clicking ANYWHERE outside the menu or button
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !menuBtn.contains(e.target) && navMenu.classList.contains('mobile-open')) {
+                navMenu.classList.remove('mobile-open');
+            }
+        });
+
+        // Close menu when a link INSIDE the menu is clicked (Better UX)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('mobile-open');
+            });
+        });
+
+
+        // --- 2. Scroll Highlight Logic (Single Selection Fix) ---
+        const sections = document.querySelectorAll('section');
+        
         window.addEventListener('scroll', () => {
             let current = '';
+            
+            // Loop through sections to find which one is currently in view
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                // If scroll position is past the top of the section (minus some offset for header)
+                // Using 200px as an offset for the sticky header
                 if (pageYOffset >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
             });
 
-            navLi.forEach(a => {
+            // Loop through nav links to apply active class
+            navLinks.forEach(a => {
                 a.classList.remove('active');
-                if (a.getAttribute('href').includes(current) && current !== '') {
+                
+                // STRICT CHECK: Ensure the href exactly matches '#' + current ID
+                // This prevents "Philosophy" and "Writing" getting confused if IDs were similar
+                if (a.getAttribute('href') === '#' + current) {
                     a.classList.add('active');
                 }
             });
         });
 
+        // Form Logic
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;

@@ -18,7 +18,7 @@
 
         /* ------------------------- 🎨 THEME VARIABLES ------------------------- */
         :root {
-            --primary: #4F46E5;       /* Indigo 600 */
+            --primary: #4F46E5;       /* Indigo 600 - Used sparingly for accents */
             --primary-dark: #3730A3;  
             --primary-light: #EEF2FF; 
             
@@ -123,7 +123,8 @@
 
         /* ------------------------- ✨ HERO SECTION ------------------------- */
         .hero {
-            min-height: 90vh;
+            min-height: auto;
+            padding: 8rem 0 4rem 0; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -194,11 +195,13 @@
             color: var(--text-secondary);
         }
 
+        /* ------------------------- 🔘 BUTTONS (FINAL TONAL HIERARCHY) ------------------------- */
         .cta-group {
             display: flex;
+            flex-wrap: wrap; 
             justify-content: center;
             gap: 1rem;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             animation: fadeIn 0.8s ease-out 0.8s backwards;
         }
 
@@ -206,14 +209,17 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 0.875rem 2rem;
-            border-radius: 8px;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px; /* Consistent corner radius */
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
             transition: all 0.2s ease;
             text-decoration: none;
+            gap: 0.6rem;
+            border: 1px solid transparent; /* Base border for layout stability */
         }
 
+        /* 1. Primary: The Journey (Solid Black - The Anchor) */
         .btn-primary {
             background: var(--text-main);
             color: white;
@@ -221,20 +227,37 @@
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            background: #000;
+            background: #000000;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
-        .btn-secondary {
-            background: white;
+        /* 2. The Lab: Secondary (Soft Surface - The Explorer) */
+        /* Design Logic: Uses a neutral gray surface to stand out from the white background
+           without competing with the black primary button. */
+        .btn-lab {
+            background: #F3F4F6; /* Cool Gray 100 */
             color: var(--text-main);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-lab:hover {
+            background: #E5E7EB; /* Darken slightly on hover */
+            transform: translateY(-1px);
+            color: black;
+        }
+
+        /* 3. Writing: Tertiary (Stroke - The Reference) */
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-secondary);
+            border-color: #E5E7EB;
         }
 
         .btn-secondary:hover {
-            transform: translateY(-2px);
             border-color: var(--text-main);
+            color: var(--text-main);
+            background: white;
+            transform: translateY(-1px);
         }
 
         .scroll-down {
@@ -253,6 +276,7 @@
         .philosophy {
             background: var(--bg-page);
             overflow: hidden; 
+            padding-top: 2rem; /* Reduced padding */
         }
 
         .section-header { text-align: center; margin-bottom: 3rem; }
@@ -275,7 +299,7 @@
         .horizontal-scroller::-webkit-scrollbar-thumb { background-color: var(--border); border-radius: 20px; }
 
         .philosophy-card {
-            flex: 0 0 360px; /* WIDENED to 360px to fit text */
+            flex: 0 0 360px;
             scroll-snap-align: center;
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -298,7 +322,7 @@
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--text-main);
-            white-space: nowrap; /* FORCES SINGLE LINE */
+            white-space: nowrap;
         }
 
         .philosophy-card p {
@@ -321,8 +345,90 @@
         .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .tag { font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; background: white; border: 1px solid var(--border); border-radius: 100px; color: var(--text-secondary); }
 
+        /* ------------------------- 🧪 PROTOTYPES (LAB) ------------------------- */
+        .prototypes { background: var(--bg-page); }
+
+        .disclaimer-box {
+            background: #FFFBEB; /* Light yellow */
+            border: 1px solid #FCD34D;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            margin: 0 auto 3rem auto;
+            max-width: 700px;
+            color: #92400E;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .prototype-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Dashed border to signify "Work in Progress" */
+        .prototype-card {
+            background: white;
+            border: 1px dashed var(--text-tertiary); 
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .prototype-card:hover {
+            border-style: solid;
+            border-color: var(--primary);
+            box-shadow: var(--shadow-card);
+            transform: translateY(-2px);
+        }
+
+        .prototype-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .prototype-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .prototype-icon {
+            font-size: 1.25rem;
+        }
+
+        .prototype-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .prototype-meta {
+            margin-top: auto;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-tertiary);
+            background: var(--bg-section);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
         /* ------------------------- 📝 WRITING ------------------------- */
-        .writing { background: var(--bg-page); }
+        .writing { background: var(--bg-section); } 
 
         .writing-grid {
             display: grid;
@@ -384,7 +490,7 @@
         }
 
         /* ------------------------- 🤝 CONTACT ------------------------- */
-        .contact { background: var(--bg-section); }
+        .contact { background: var(--bg-page); }
         .contact-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; }
         .contact-item { display: flex; gap: 1rem; padding: 1.5rem; background: white; border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border); text-decoration: none; transition: box-shadow 0.2s; }
         .contact-item:hover { box-shadow: var(--shadow-card); }
@@ -395,7 +501,7 @@
         .form-input { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 1rem; background: #F9FAFB; }
         .form-input:focus { outline: none; border-color: var(--primary); background: white; }
         
-        /* ------------------------- 🦶 FOOTER (REDESIGNED) ------------------------- */
+        /* ------------------------- 🦶 FOOTER ------------------------- */
         footer {
             background: white;
             border-top: 1px solid var(--border);
@@ -462,7 +568,14 @@
         /* ------------------------- 📱 RESPONSIVE ------------------------- */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
-            .cta-group { flex-direction: column; }
+            
+            /* Stack buttons on mobile */
+            .cta-group { 
+                flex-direction: column; 
+                align-items: stretch;
+                padding: 0 2rem;
+            }
+            
             .contact-layout { grid-template-columns: 1fr; }
             
             /* Hidden by default on mobile */
@@ -503,6 +616,7 @@
             <ul id="nav-menu">
                 <li><a href="#philosophy">Philosophy</a></li>
                 <li><a href="#journey">Journey</a></li>
+                <li><a href="#prototypes">Lab</a></li>
                 <li><a href="#writing">Writing</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -512,7 +626,7 @@
     <section class="hero">
         <div class="container hero-content">
             <h1>I build products that<br>make life easier.</h1>
-            <p class="tagline">Product leader with range, not narrow specialization.</p>
+            <p class="tagline">Product Leader with range.</p>
             <p class="description">
                 From viral consumer apps to billion-dollar fintech platforms to marketplace infrastructure at scale, I've deliberately sought out different types of hard problems across three continents to build adaptability, not just expertise in one domain.
             </p>
@@ -527,8 +641,20 @@
             </div>
 
             <div class="cta-group">
-                <a href="#journey" class="btn btn-primary">View My Journey</a>
-                <a href="#writing" class="btn btn-secondary">Read My Writing</a>
+                <a href="#journey" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M15 5l7 7-7 7"/></svg>
+                    View Journey
+                </a>
+
+                <a href="#prototypes" class="btn btn-lab">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4l3 9H7l3-9z"/><path d="M21.5 18a2.5 2.5 0 0 1-4.72 1.06 6.5 6.5 0 0 0-9.56 0A2.5 2.5 0 0 1 2.5 18"/></svg>
+                    Check My Lab
+                </a>
+
+                <a href="#writing" class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    Read Writing
+                </a>
             </div>
 
             <div class="scroll-down" onclick="document.getElementById('philosophy').scrollIntoView({behavior: 'smooth'})">
@@ -652,6 +778,86 @@
         </div>
     </section>
 
+    <section id="prototypes" class="prototypes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Laboratory</h2>
+                <p class="section-subtitle">Side projects, weekend builds, and experiments.</p>
+            </div>
+
+            <div class="disclaimer-box">
+                <span style="font-size: 1.5rem">🧪</span>
+                <div>
+                    <strong>Uncooked Ideas:</strong> These are prototypes I'm tinkering with. They aren't polished products—you might find bugs, but you'll also find fresh ideas.
+                </div>
+            </div>
+
+            <div class="prototype-grid">
+                
+                <a href="https://chromewebstore.google.com/detail/screen-time-tracker/jgplahepdhlogaohgdobhaddhppklfkg" target="_blank" class="prototype-card">
+                    <div class="prototype-header">
+                        <span class="prototype-title">Screen Time Tracker</span>
+                        <span class="prototype-icon">⏱️</span>
+                    </div>
+                    <p class="prototype-desc">A Chrome extension to manage digital wellbeing by tracking and visualizing your browsing habits.</p>
+                    <div class="prototype-meta">
+                        <span class="tech-tag">Chrome Ext</span>
+                        <span class="tech-tag">Productivity</span>
+                    </div>
+                </a>
+
+                <a href="https://chromewebstore.google.com/detail/task-taker/ndalnngmmkbgfenmgcgljllbjddeldjn" target="_blank" class="prototype-card">
+                    <div class="prototype-header">
+                        <span class="prototype-title">Task Taker</span>
+                        <span class="prototype-icon">✅</span>
+                    </div>
+                    <p class="prototype-desc">Lightweight browser extension to capture tasks quickly without switching context tabs.</p>
+                    <div class="prototype-meta">
+                        <span class="tech-tag">Chrome Ext</span>
+                        <span class="tech-tag">Utility</span>
+                    </div>
+                </a>
+
+                <a href="https://deft-basbousa-5c83c7.netlify.app/" target="_blank" class="prototype-card">
+                    <div class="prototype-header">
+                        <span class="prototype-title">Stream Scout</span>
+                        <span class="prototype-icon">🎬</span>
+                    </div>
+                    <p class="prototype-desc">Smart content discovery portal to solve the "what to watch" paralysis across platforms.</p>
+                    <div class="prototype-meta">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">API</span>
+                    </div>
+                </a>
+
+                <a href="https://lighthearted-pasca-a0c5a3.netlify.app/" target="_blank" class="prototype-card">
+                    <div class="prototype-header">
+                        <span class="prototype-title">TweetRadar</span>
+                        <span class="prototype-icon">🐦</span>
+                    </div>
+                    <p class="prototype-desc">A tool to surface insightful tweets and cut through the noise of the timeline.</p>
+                    <div class="prototype-meta">
+                        <span class="tech-tag">Social</span>
+                        <span class="tech-tag">Discovery</span>
+                    </div>
+                </a>
+
+                <a href="https://shri816.github.io/shrikant-kadu-journey/" target="_blank" class="prototype-card">
+                    <div class="prototype-header">
+                        <span class="prototype-title">Interactive Journey</span>
+                        <span class="prototype-icon">🗺️</span>
+                    </div>
+                    <p class="prototype-desc">A visual experiment in storytelling to showcase career progression.</p>
+                    <div class="prototype-meta">
+                        <span class="tech-tag">Web</span>
+                        <span class="tech-tag">Portfolio</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
     <section id="writing" class="writing">
         <div class="container">
             <div class="section-header">
@@ -660,6 +866,15 @@
             </div>
 
             <div class="writing-grid">
+                
+                <a href="https://substack.com/@shrikantkadu/p-180574864" target="_blank" class="article-card">
+                    <div class="article-meta">
+                        <span class="article-icon">🔮</span>
+                        <span class="article-platform">Substack</span>
+                    </div>
+                    <div class="article-title">The Future of Work and Human Value in an AI World</div>
+                    <span class="article-link-text">Read Article →</span>
+                </a>
                 
                 <a href="https://www.linkedin.com/posts/shrikant-g-kadu_userbehavior-contentdiscovery-streaming-activity-7362069191635451904-Y4wP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB9yxR0BGf2OraMD1nPKk6hnNVP3Vz_ssxk" target="_blank" class="article-card">
                     <div class="article-meta">
@@ -855,7 +1070,6 @@
                 a.classList.remove('active');
                 
                 // STRICT CHECK: Ensure the href exactly matches '#' + current ID
-                // This prevents "Philosophy" and "Writing" getting confused if IDs were similar
                 if (a.getAttribute('href') === '#' + current) {
                     a.classList.add('active');
                 }

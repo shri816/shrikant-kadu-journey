@@ -97,7 +97,9 @@
         .hero .tagline { font-size: 1.5rem; font-weight: 500; color: var(--primary); margin-bottom: 1.5rem; }
         .hero .description { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; }
         
-        .companies { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-bottom: 3rem; }
+        /* ✅ FIXED: Added align-items: center to fix vertical alignment */
+        .companies { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 3rem; }
+        
         .companies span.label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-tertiary); margin-right: 0.5rem; }
         .company-tag { padding: 0.4rem 0.8rem; background: var(--bg-section); border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); }
 
@@ -245,7 +247,7 @@
         <div class="container">
             <div class="logo">
                 <img src="profile_pic.jpeg" alt="Shrikant Kadu" class="nav-profile-pic" id="profileTrigger">
-                <a href="#" style="color: inherit; text-decoration: none;">Shrikant Kadu</a>
+                <a href="#" style="color: inherit; text-decoration: none; font-weight: 800;">Shrikant Kadu</a>
             </div>
             
             <button class="mobile-menu-btn" id="menuToggle">☰</button>
@@ -436,7 +438,7 @@
                         <span class="prototype-title">Screen Time Tracker</span>
                         <span class="prototype-icon">⏱️</span>
                     </div>
-                    <p class="prototype-desc">Found it difficult to track my desktop screentime, so built this chrome extension.</p>
+                    <p class="prototype-desc">A Chrome extension to manage digital wellbeing by tracking and visualizing your browsing habits.</p>
                     <div class="prototype-meta">
                         <span class="tech-tag">Chrome Ext</span>
                         <span class="tech-tag">Productivity</span>
@@ -448,7 +450,7 @@
                         <span class="prototype-title">Task Taker</span>
                         <span class="prototype-icon">✅</span>
                     </div>
-                    <p class="prototype-desc">Needed an agent to track & remind me of my pending tasks, so built this chrome extension.</p>
+                    <p class="prototype-desc">Lightweight browser extension to capture tasks quickly without switching context tabs.</p>
                     <div class="prototype-meta">
                         <span class="tech-tag">Chrome Ext</span>
                         <span class="tech-tag">Utility</span>

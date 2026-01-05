@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shri816.github.io/shrikant-kadu-journey/sitemap.xml

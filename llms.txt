@@ -1,0 +1,60 @@
+# Shrikant Kadu - Product Leader
+
+> A high-range Product Leader specializing in building and scaling products across Fintech, Marketplace, Consumer Social, and AI infrastructure. Experience spans three continents (USA, Germany, India) and stages from 0-to-1 startups to billion-dollar global platforms.
+
+## Core Identity & Philosophy
+* **Identity:** Product Leader with a focus on adaptability and solving hard problems in unfamiliar territory.
+* **Philosophy:** Starts from user reality, builds systems over individual heroics, and leverages constraints as fuel for innovation.
+
+## Professional Journey
+
+### DoorDash (Wolt) | Berlin, Germany
+**Product Lead (2024 - 2025)**
+* Focused on global category expansion beyond food delivery.
+* Managed initiatives in Grocery, Drone Delivery, and new verticals.
+* Keywords: Global Markets, New Verticals, Logistics Tech.
+
+### Paytm | Bangalore, India
+**Director of Product Management (2022 - 2024)**
+* Owned credit card products driving over $1B in GMV.
+* Navigated complex banking regulations and led a team of 4 PMs.
+* Keywords: Fintech, Credit, Scale, Leadership.
+
+### Dailyhunt (Josh) | Bangalore, India
+**Senior Product Manager (2021 - 2022)**
+* Scaled India's leading short-video app to 10M+ Daily Active Users (DAU).
+* Focused on viral growth mechanics, creator economy, and localization.
+* Keywords: Growth, Consumer Social, Creator Economy.
+
+### eBay / StubHub | San Francisco Bay Area, USA
+**Senior Product Manager (2019 - 2021)**
+* Built payments infrastructure for 80,000+ sellers.
+* Optimized growth for a global ticketing marketplace.
+* Keywords: Payments, Marketplace, E-commerce Infrastructure.
+
+### Inbenta | San Francisco Bay Area, USA
+**Product Manager (First Product Hire) (2016 - 2019)**
+* Built AI search and chatbot products using symbolic AI.
+* Scaled the product organization from 0 to 1.
+* Keywords: AI/ML, NLP, B2B SaaS, 0-to-1.
+
+## The Laboratory (Technical Projects)
+* **Screen Time Tracker:** Chrome extension for digital wellbeing and browsing habit visualization.
+* **Task Taker:** Context-aware browser utility for rapid task capture.
+* **CrunchyQR:** Aesthetic-focused QR code generator for styled link sharing.
+* **Stream Scout:** React-based content discovery portal for streaming platforms.
+* **TweetRadar:** Curation tool for surfacing high-signal social content.
+
+## Selected Writing & Thought Leadership
+* **AI & Future of Work:** "The Future of Work and Human Value in an AI World" (Substack).
+* **Scaling Products:** "How We Scaled Josh to 10 Million DAU: Localization Lessons."
+* **Strategy:** "Vision and Roadmap of an AI product" and "Writing product vision & roadmap documents" (Medium).
+* **Leadership:** "Building a stellar team of product managers."
+* **Speaking:** "Working Cross-Functionally as a PM" (eBay/YouTube Webinar).
+
+## Essential Links
+* **Website:** https://shri816.github.io/shrikant-kadu-journey/
+* **LinkedIn:** https://www.linkedin.com/in/shrikant-g-kadu/
+* **GitHub:** https://github.com/shri816
+* **Email:** shri.kadu13@gmail.com
+* **Twitter/X:** https://x.com/shrikant_kadu

@@ -9,8 +9,32 @@
 
     <title>Shrikant Kadu - Product Leader</title>
     
-    <link rel="icon" type="image/jpeg" href="profile_pic.jpeg">
+    <meta name="description" content="Professional journey of Shrikant Kadu, a Product Leader with experience at DoorDash, Paytm, and eBay. Explore my philosophy, projects, and writing.">
+    <link rel="help" type="text/markdown" href="llms.txt">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shrikant Kadu",
+      "url": "https://shri816.github.io/shrikant-kadu-journey/",
+      "image": "https://shri816.github.io/shrikant-kadu-journey/profile_pic.jpeg",
+      "jobTitle": "Product Leader",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "DoorDash"
+      },
+      "description": "Product Leader with global experience building fintech, marketplace, and AI products across three continents.",
+      "sameAs": [
+        "https://www.linkedin.com/in/shrikant-g-kadu/",
+        "https://x.com/shrikant_kadu",
+        "https://shrikantkadu.medium.com/",
+        "https://github.com/shri816"
+      ]
+    }
+    </script>
 
+    <link rel="icon" type="image/jpeg" href="profile_pic.jpeg">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
@@ -22,14 +46,14 @@
 
         /* ------------------------- 🎨 THEME VARIABLES ------------------------- */
         :root {
-            --primary: #4F46E5;       
-            --text-main: #111827;     
+            --primary: #4F46E5;        
+            --text-main: #111827;      
             --text-secondary: #4B5563; 
             --text-tertiary: #9CA3AF;
-            --bg-page: #FFFFFF;       
-            --bg-section: #F9FAFB;    
+            --bg-page: #FFFFFF;        
+            --bg-section: #F9FAFB;     
             --bg-card: #FFFFFF;
-            --border: #E5E7EB;        
+            --border: #E5E7EB;         
             --nav-bg: rgba(255, 255, 255, 0.95);
             --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -64,20 +88,18 @@
             cursor: pointer;
         }
 
-        /* 🖼️ NAV PROFILE PICTURE (The Trigger) */
         .nav-profile-pic {
             width: 40px; height: 40px;
             border-radius: 50%; object-fit: cover;
             border: 2px solid white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            /* Ensure the image stays on top during animation calculation */
             position: relative; 
             z-index: 1001; 
             transition: transform 0.2s ease;
         }
         
         .nav-profile-pic:hover { transform: scale(1.05); }
-        .nav-profile-pic.hidden { opacity: 0; } /* Hide original during animation */
+        .nav-profile-pic.hidden { opacity: 0; }
 
         nav ul { display: flex; list-style: none; gap: 2.5rem; }
         nav a { color: var(--text-secondary); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s ease; }
@@ -97,13 +119,11 @@
         .hero .tagline { font-size: 1.5rem; font-weight: 500; color: var(--primary); margin-bottom: 1.5rem; }
         .hero .description { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; }
         
-        /* ✅ FIXED: Added align-items: center to fix vertical alignment */
         .companies { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 3rem; }
-        
         .companies span.label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-tertiary); margin-right: 0.5rem; }
         .company-tag { padding: 0.4rem 0.8rem; background: var(--bg-section); border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); }
 
-        /* ------------------------- 🔘 BUTTONS ------------------------- */
+        /* 🔘 BUTTONS */
         .cta-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 3rem; }
         .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; transition: all 0.2s ease; text-decoration: none; gap: 0.6rem; border: 1px solid transparent; }
         .btn-primary { background: var(--text-main); color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
@@ -115,7 +135,7 @@
         
         .scroll-down { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: var(--text-tertiary); font-size: 0.875rem; font-weight: 500; cursor: pointer; animation: bounce 2s infinite; }
 
-        /* ------------------------- 💡 PHILOSOPHY ------------------------- */
+        /* 💡 PHILOSOPHY */
         .philosophy { background: var(--bg-page); overflow: hidden; padding-top: 2rem; }
         .section-header { text-align: center; margin-bottom: 3rem; }
         .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.02em; }
@@ -125,7 +145,7 @@
         .philosophy-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--primary); }
         .philosophy-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; }
         
-        /* ------------------------- 🗺️ JOURNEY & PROTOTYPES & WRITING ------------------------- */
+        /* 🗺️ JOURNEY & PROTOTYPES & WRITING */
         .journey { background: var(--bg-section); }
         .timeline { max-width: 800px; margin: 0 auto; position: relative; }
         .timeline::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 2px; background: var(--border); }
@@ -176,52 +196,33 @@
         .social-link:hover { background: var(--text-main); transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); }
         .social-link:hover svg { fill: white; }
 
-        /* ------------------------- 🖼️ SILICON VALLEY MODAL (FLIP Animation) ------------------------- */
+        /* 🖼️ MODAL ANIMATION */
         .image-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Dim background */
-            backdrop-filter: blur(16px); /* Heavy blur for focus */
-            -webkit-backdrop-filter: blur(16px);
-            z-index: 2000;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px); z-index: 2000;
             display: flex; justify-content: center; align-items: center;
-            opacity: 0; pointer-events: none; /* Hidden state */
-            transition: opacity 0.4s ease;
+            opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
         }
 
-        .image-overlay.active {
-            opacity: 1; pointer-events: auto;
-        }
+        .image-overlay.active { opacity: 1; pointer-events: auto; }
 
-        /* The Animated Image */
         .expanded-image {
-            position: fixed; /* Keeps it independent of layout */
-            z-index: 2001;
-            border-radius: 50%; /* Start circular */
-            object-fit: cover;
-            cursor: zoom-out;
-            transform-origin: top left; /* Crucial for calc based animation */
-            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); /* "Apple" ease-out */
+            position: fixed; z-index: 2001; border-radius: 50%;
+            object-fit: cover; cursor: zoom-out; transform-origin: top left;
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
             box-shadow: 0 20px 50px rgba(0,0,0,0.3);
         }
 
-        /* Close Button */
         .close-overlay {
-            position: absolute; top: 2rem; right: 2rem;
-            width: 44px; height: 44px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
+            position: absolute; top: 2rem; right: 2rem; width: 44px; height: 44px;
+            background: rgba(255, 255, 255, 0.1); border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             color: white; font-size: 1.5rem; cursor: pointer;
-            transition: background 0.2s;
-            opacity: 0; transform: scale(0.8);
+            transition: background 0.2s; opacity: 0; transform: scale(0.8);
         }
         
-        .image-overlay.active .close-overlay {
-            opacity: 1; transform: scale(1);
-            transition-delay: 0.3s; /* Show after image arrives */
-        }
-
+        .image-overlay.active .close-overlay { opacity: 1; transform: scale(1); transition-delay: 0.3s; }
         .close-overlay:hover { background: rgba(255, 255, 255, 0.2); }
 
         /* Mobile Adjustments */
@@ -722,41 +723,31 @@
             window.location.href = `mailto:shri.kadu13@gmail.com?subject=Contact from ${name}&body=${msg}%0D%0A%0D%0AFrom: ${email}`;
         });
 
-        // --- 4. 🖼️ HIGH-PERFORMANCE FLIP ANIMATION (The Silicon Valley Touch) ---
+        // --- 4. 🖼️ HIGH-PERFORMANCE FLIP ANIMATION ---
         const trigger = document.getElementById('profileTrigger');
         const overlay = document.getElementById('overlay');
         const closeBtn = document.getElementById('closeOverlay');
         let activeImage = null;
 
         trigger.addEventListener('click', () => {
-            // 1. Get Initial Position (First)
             const rect = trigger.getBoundingClientRect();
-            
-            // 2. Create the Clone (Element that will move)
             const clone = document.createElement('img');
             clone.src = trigger.src;
             clone.classList.add('expanded-image');
-            
-            // 3. Set Initial State (matches small image exactly)
             clone.style.top = `${rect.top}px`;
             clone.style.left = `${rect.left}px`;
             clone.style.width = `${rect.width}px`;
             clone.style.height = `${rect.height}px`;
             
-            // 4. Add to DOM and hide original
             document.body.appendChild(clone);
-            trigger.classList.add('hidden'); // Hide original instantly
-            overlay.classList.add('active'); // Fade in backdrop
+            trigger.classList.add('hidden');
+            overlay.classList.add('active');
             document.body.classList.add('no-scroll');
-
             activeImage = clone;
 
-            // 5. Force Reflow (Browser must paint the start state)
             clone.getBoundingClientRect(); 
 
-            // 6. Set Final State (Last + Play)
-            // Calculate center position
-            const finalSize = Math.min(window.innerWidth * 0.8, 500); // Max 500px or 80% screen
+            const finalSize = Math.min(window.innerWidth * 0.8, 500);
             const finalTop = (window.innerHeight - finalSize) / 2;
             const finalLeft = (window.innerWidth - finalSize) / 2;
 
@@ -764,35 +755,27 @@
             clone.style.left = `${finalLeft}px`;
             clone.style.width = `${finalSize}px`;
             clone.style.height = `${finalSize}px`;
-            clone.style.borderRadius = '12px'; // Smoothly morph shape if desired
+            clone.style.borderRadius = '12px';
         });
 
-        // Closing Logic (Reverse FLIP)
         function closeImage() {
             if (!activeImage) return;
-
-            // 1. Fade out overlay elements
             overlay.classList.remove('active');
             document.body.classList.remove('no-scroll');
-
-            // 2. Get original position again (in case user scrolled or resized)
             const rect = trigger.getBoundingClientRect();
-
-            // 3. Animate Clone Back
             activeImage.style.top = `${rect.top}px`;
             activeImage.style.left = `${rect.left}px`;
             activeImage.style.width = `${rect.width}px`;
             activeImage.style.height = `${rect.height}px`;
-            activeImage.style.borderRadius = '50%'; // Back to circle
+            activeImage.style.borderRadius = '50%';
 
-            // 4. Cleanup after animation
             setTimeout(() => {
                 if (activeImage) {
                     activeImage.remove();
                     activeImage = null;
                 }
-                trigger.classList.remove('hidden'); // Show original
-            }, 500); // Matches CSS transition time
+                trigger.classList.remove('hidden');
+            }, 500);
         }
 
         closeBtn.addEventListener('click', closeImage);
@@ -800,12 +783,10 @@
             if (e.target === overlay) closeImage();
         });
         
-        // Close on Scroll (Optional UX improvement)
         window.addEventListener('scroll', () => {
             if(activeImage) closeImage();
         });
         
-        // Escape Key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeImage();
         });

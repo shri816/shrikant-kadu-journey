@@ -161,40 +161,6 @@
         .philosophy-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--primary); }
         .philosophy-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; }
 
-        /* 🎙️ PODCAST SECTION */
-        .podcast { background: var(--bg-section); }
-        .podcast-container { 
-            display: grid; 
-            grid-template-columns: 1.2fr 1fr; 
-            gap: 3rem; 
-            align-items: center; 
-            background: var(--bg-card); 
-            padding: 3rem; 
-            border-radius: 20px; 
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-card);
-        }
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            background: #000;
-        }
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        .podcast-content h3 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-main); }
-        .podcast-content p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem; }
-        .btn-youtube { background: var(--youtube-red); color: white; }
-        .btn-youtube:hover { background: #CC0000; transform: translateY(-1px); color: white; }
-        
         /* 🗺️ JOURNEY & PROTOTYPES & WRITING */
         .journey { background: var(--bg-page); }
         .timeline { max-width: 800px; margin: 0 auto; position: relative; }
@@ -280,7 +246,7 @@
             .hero h1 { font-size: 2.5rem; }
             .cta-group { flex-direction: column; align-items: stretch; padding: 0 2rem; }
             .contact-layout { grid-template-columns: 1fr; }
-            .podcast-container { grid-template-columns: 1fr; padding: 1.5rem; }
+
             nav ul { display: none; }
             .mobile-menu-btn { display: block; }
             nav ul.mobile-open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: white; padding: 2rem; border-bottom: 1px solid var(--border); box-shadow: var(--shadow-card); }
@@ -306,7 +272,7 @@
             
             <ul id="nav-menu">
                 <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#podcast">Podcast</a></li>
+
                 <li><a href="#journey">Journey</a></li>
                 <li><a href="#prototypes">Lab</a></li>
                 <li><a href="#writing">Writing</a></li>
@@ -338,10 +304,6 @@
                     View Journey
                 </a>
 
-                <a href="#podcast" class="btn btn-secondary" style="border-color: var(--youtube-red); color: var(--youtube-red);">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                    Listen to Podcast
-                </a>
 
                 <a href="#prototypes" class="btn btn-lab">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4l3 9H7l3-9z"/><path d="M21.5 18a2.5 2.5 0 0 1-4.72 1.06 6.5 6.5 0 0 0-9.56 0A2.5 2.5 0 0 1 2.5 18"/></svg>
@@ -388,30 +350,6 @@
         </div>
     </section>
 
-    <section id="podcast" class="podcast">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Beyond the Title</h2>
-                <p class="section-subtitle">A podcast uncovering the routines, skill sets, and actions that drive impact underneath job titles.</p>
-            </div>
-
-            <div class="podcast-container">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=Beyond-The-Title" title="Beyond The Title Podcast" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="podcast-content">
-                    <h3>Decoding Professional Mastery</h3>
-                    <p>Most people see the title, but few see the craft. In this series, I talk with leaders and builders to deconstruct exactly how they navigate ambiguity and ship results.</p>
-                    <div class="cta-group" style="justify-content: flex-start;">
-                        <a href="https://www.youtube.com/@Beyond-The-Title" target="_blank" class="btn btn-youtube">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                            Subscribe on YouTube
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section id="journey" class="journey">
         <div class="container">

@@ -3,63 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script data-goatcounter="https://shrikant-kadu.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-
+    <script data-goatcounter="https://shrikant-kadu.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <title>Shrikant Kadu - Product Leader</title>
-
     <meta name="description" content="Professional journey of Shrikant Kadu, a Product Leader with experience at DoorDash, Paytm, and eBay. Explore my philosophy, projects, and writing.">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://shri816.github.io/shrikant-kadu-journey/">
-    <meta property="og:title" content="Shrikant Kadu - Product Leader">
-    <meta property="og:description" content="I ❤️ building products that make life easier. Hands-on Product Leader with experience across Consumer, Fintech, and Enterprise B2B.">
-    <meta property="og:image" content="https://shri816.github.io/shrikant-kadu-journey/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://shri816.github.io/shrikant-kadu-journey/">
-    <meta name="twitter:title" content="Shrikant Kadu - Product Leader">
-    <meta name="twitter:description" content="I ❤️ building products that make life easier. Hands-on Product Leader with experience across Consumer, Fintech, and Enterprise B2B.">
-    <meta name="twitter:image" content="https://shri816.github.io/shrikant-kadu-journey/og-image.png">
-    <link rel="help" type="text/markdown" href="llms.txt">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Shrikant Kadu",
-      "url": "https://shri816.github.io/shrikant-kadu-journey/",
-      "image": "https://shri816.github.io/shrikant-kadu-journey/profile_pic.jpeg",
-      "jobTitle": "Product Leader",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "DoorDash"
-      },
-      "description": "Product Leader with global experience building fintech, marketplace, and AI products across three continents.",
-      "sameAs": [
-        "https://www.linkedin.com/in/shrikant-g-kadu/",
-        "https://x.com/shrikant_kadu",
-        "https://shrikantkadu.medium.com/",
-        "https://github.com/shri816",
-        "https://www.youtube.com/@Beyond-The-Title"
-      ]
-    }
-    </script>
-
     <link rel="icon" type="image/jpeg" href="profile_pic.jpeg">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* ------------------------- 🎨 THEME VARIABLES ------------------------- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --primary: #4F46E5;        
             --text-main: #111827;      
@@ -76,210 +27,86 @@
         }
 
         html { scroll-behavior: smooth; scroll-padding-top: 100px; }
-        body {
-            font-family: 'Nunito', sans-serif;
-            color: var(--text-main);
-            line-height: 1.6;
-            background: var(--bg-page);
-            -webkit-font-smoothing: antialiased;
-        }
-        
+        body { font-family: 'Nunito', sans-serif; color: var(--text-main); line-height: 1.6; background: var(--bg-page); -webkit-font-smoothing: antialiased; }
         body.no-scroll { overflow: hidden; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 6rem 0; }
 
-        /* ------------------------- 🧭 NAVIGATION ------------------------- */
-        nav {
-            position: sticky; top: 0; background: var(--nav-bg);
-            backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
-            z-index: 1000; padding: 1rem 0;
-        }
-
-        nav .container {
-            max-width: 1200px; margin: 0 auto; padding: 0 2rem;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-
-        nav .logo {
-            font-size: 1.125rem; font-weight: 800; color: var(--text-main);
-            text-decoration: none; display: flex; align-items: center; gap: 0.75rem;
-            cursor: pointer;
-        }
-
-        .nav-profile-pic {
-            width: 40px; height: 40px;
-            border-radius: 50%; object-fit: cover;
-            border: 2px solid white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: relative; 
-            z-index: 1001; 
-            transition: transform 0.2s ease;
-        }
-        
-        .nav-profile-pic:hover { transform: scale(1.05); }
-        .nav-profile-pic.hidden { opacity: 0; }
-
+        /* Navigation */
+        nav { position: sticky; top: 0; background: var(--nav-bg); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 1000; padding: 1rem 0; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        nav .logo { font-size: 1.125rem; font-weight: 800; color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; }
+        .nav-profile-pic { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.2s ease; }
         nav ul { display: flex; list-style: none; gap: 2.5rem; }
         nav a { color: var(--text-secondary); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s ease; }
         nav a:hover, nav a.active { color: var(--primary); }
-
         .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-main); }
 
-        /* ------------------------- 🏗️ GENERAL LAYOUT ------------------------- */
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-        section { padding: 6rem 0; }
-        section[id] { scroll-margin-top: 100px; }
-
-        /* ------------------------- ✨ HERO ------------------------- */
+        /* Hero */
         .hero { padding: 8rem 0 4rem 0; text-align: center; background: radial-gradient(50% 50% at 50% 50%, #FAFAFA 0%, #FFFFFF 100%); }
         .hero h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.03em; background: linear-gradient(135deg, #111827 30%, #4F46E5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero-content { max-width: 850px; margin: 0 auto; }
-        .hero .tagline { font-size: 1.5rem; font-weight: 500; color: var(--primary); margin-bottom: 1.5rem; }
-        .hero .description { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; }
-        
+        .hero .description { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 700px; margin: 0 auto 3rem; }
         .companies { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.75rem; margin-bottom: 3rem; }
-        .companies span.label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-tertiary); margin-right: 0.5rem; }
-        .company-tag { padding: 0.4rem 0.8rem; background: var(--bg-section); border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); }
-
-        /* 🔘 BUTTONS */
+        .company-tag { padding: 0.4rem 0.8rem; background: var(--bg-section); border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; font-weight: 600; }
+        
         .cta-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; }
         .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; transition: all 0.2s ease; text-decoration: none; gap: 0.6rem; border: 1px solid transparent; }
-        .btn-primary { background: var(--text-main); color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .btn-primary:hover { background: #000000; transform: translateY(-1px); }
+        .btn-primary { background: var(--text-main); color: white; }
         .btn-lab { background: #F3F4F6; color: var(--text-main); }
-        .btn-lab:hover { background: #E5E7EB; transform: translateY(-1px); color: black; }
         .btn-secondary { background: transparent; color: var(--text-secondary); border-color: #E5E7EB; }
-        .btn-secondary:hover { border-color: var(--text-main); color: var(--text-main); background: white; transform: translateY(-1px); }
-        
-        .podcast-hero-link { display: inline-block; font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; margin-bottom: 3rem; }
-        .podcast-hero-link:hover { color: var(--youtube-red); }
+        .podcast-hero-link { display: inline-block; font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; margin-bottom: 3rem; }
+        .podcast-hero-link:hover { color: var(--youtube-red); text-decoration: underline; }
 
-        /* 🎙️ PODCAST SECTION */
+        /* Podcast Tiles */
         .podcast { background: var(--bg-section); }
         .episode-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-        .episode-card { background: white; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; transition: all 0.3s ease; display: flex; flex-direction: column; }
-        .episode-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: var(--youtube-red); }
-        .episode-thumb { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-bottom: 1px solid var(--border); }
-        .episode-body { padding: 1.25rem; flex-grow: 1; display: flex; flex-direction: column; }
-        .episode-title { font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.75rem; line-height: 1.4; }
-        .episode-desc { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; flex-grow: 1; }
-        .btn-play { font-size: 0.85rem; font-weight: 700; color: var(--youtube-red); display: flex; align-items: center; gap: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .episode-card { background: white; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; transition: 0.3s ease; display: flex; flex-direction: column; }
+        .episode-card:hover { transform: translateY(-5px); border-color: var(--youtube-red); box-shadow: var(--shadow-hover); }
+        .episode-thumb { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+        .episode-body { padding: 1.25rem; flex-grow: 1; }
+        .episode-title { font-size: 1.05rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .btn-play { font-size: 0.8rem; font-weight: 800; color: var(--youtube-red); text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem; }
 
-        /* 💡 PHILOSOPHY */
-        .philosophy { background: var(--bg-page); overflow: hidden; padding-top: 2rem; }
+        /* Common Components */
         .section-header { text-align: center; margin-bottom: 3rem; }
-        .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
         .section-subtitle { font-size: 1.125rem; color: var(--text-secondary); }
-        .horizontal-scroller { display: flex; gap: 1.5rem; overflow-x: auto; padding: 1rem 1rem 2.5rem 1rem; scroll-snap-type: x mandatory; scrollbar-width: thin; }
-        .philosophy-card { flex: 0 0 360px; scroll-snap-align: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; transition: all 0.3s ease; }
-        .philosophy-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--primary); }
-        .philosophy-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; }
-        
-        /* 🗺️ JOURNEY & PROTOTYPES & WRITING */
-        .journey { background: var(--bg-page); }
-        .timeline { max-width: 800px; margin: 0 auto; position: relative; }
-        .timeline::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 2px; background: var(--border); }
-        .timeline-item { position: relative; padding-left: 3rem; margin-bottom: 4rem; }
-        .timeline-dot { position: absolute; left: -5px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--bg-page); border: 2px solid var(--primary); }
-        .timeline-date { font-size: 0.875rem; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
-        .timeline-content h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; }
-        .timeline-company { font-size: 1.125rem; color: var(--text-secondary); font-weight: 500; margin-bottom: 1rem; }
-        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .tag { font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; background: var(--bg-section); border: 1px solid var(--border); border-radius: 100px; color: var(--text-secondary); }
-
-        .prototypes { background: var(--bg-section); }
-        .disclaimer-box { background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 8px; padding: 1rem 1.5rem; margin: 0 auto 3rem auto; max-width: 700px; color: #92400E; font-size: 0.95rem; display: flex; align-items: center; gap: 1rem; }
-        .prototype-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
-        .prototype-card { background: white; border: 1px dashed var(--text-tertiary); border-radius: 12px; padding: 1.5rem; text-decoration: none; transition: all 0.2s ease; display: flex; flex-direction: column; height: 100%; }
-        .prototype-card:hover { border-style: solid; border-color: var(--primary); box-shadow: var(--shadow-card); transform: translateY(-2px); }
-        .prototype-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
-        .prototype-title { font-size: 1.125rem; font-weight: 700; color: var(--text-main); }
-        .prototype-icon { font-size: 1.25rem; }
-        .prototype-desc { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem; flex-grow: 1; }
-        .prototype-meta { margin-top: auto; display: flex; gap: 0.5rem; }
-        .tech-tag { font-size: 0.7rem; font-weight: 600; color: var(--text-tertiary); background: var(--bg-section); padding: 2px 8px; border-radius: 4px; }
-
-        .writing { background: var(--bg-page); } 
         .writing-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
-        .article-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; text-decoration: none; transition: all 0.2s ease; display: flex; flex-direction: column; height: 100%; }
-        .article-card:hover { border-color: var(--text-main); box-shadow: var(--shadow-card); transform: translateY(-2px); }
+        .article-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; text-decoration: none; transition: 0.2s; display: flex; flex-direction: column; height: 100%; }
+        .article-card:hover { border-color: var(--text-main); transform: translateY(-2px); box-shadow: var(--shadow-card); }
         .article-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
         .article-title { font-size: 1.125rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; line-height: 1.4; }
-        .article-link-text { margin-top: auto; padding-top: 1rem; font-size: 0.875rem; font-weight: 600; color: var(--primary); display: flex; align-items: center; gap: 0.25rem; }
+        .article-link-text { margin-top: auto; padding-top: 1rem; font-size: 0.875rem; font-weight: 600; color: var(--primary); }
 
-        .contact { background: var(--bg-page); }
-        .contact-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; }
-        .contact-item { display: flex; gap: 1rem; padding: 1.5rem; background: var(--bg-section); border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border); text-decoration: none; transition: box-shadow 0.2s; }
-        .contact-item:hover { box-shadow: var(--shadow-card); }
-        .contact-form { background: white; padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border); box-shadow: var(--shadow-card); }
-        .form-group { margin-bottom: 1.5rem; }
-        .form-label { display: block; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem; }
-        .form-input { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 1rem; background: #F9FAFB; }
-        .form-input:focus { outline: none; border-color: var(--primary); background: white; }
+        /* Philosophy Scroller */
+        .horizontal-scroller { display: flex; gap: 1.5rem; overflow-x: auto; padding-bottom: 2rem; scroll-snap-type: x mandatory; }
+        .philosophy-card { flex: 0 0 360px; scroll-snap-align: center; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 2rem; transition: 0.3s; }
+        .philosophy-card:hover { border-color: var(--primary); box-shadow: var(--shadow-hover); }
 
-        footer { background: white; border-top: 1px solid var(--border); padding: 4rem 0; text-align: center; }
-        .footer-content { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
-        .footer-name { font-size: 1.5rem; font-weight: 800; color: var(--text-main); letter-spacing: -0.02em; }
-        .social-icons { display: flex; gap: 1.5rem; margin-top: 0.5rem; }
-        .social-link { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: var(--bg-section); transition: all 0.3s ease; text-decoration: none; }
-        .social-link svg { width: 20px; height: 20px; fill: var(--text-secondary); transition: fill 0.3s ease; }
-        .social-link:hover { background: var(--text-main); transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); }
-        .social-link:hover svg { fill: white; }
-
-        /* 🖼️ MODAL ANIMATION */
-        .image-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px); z-index: 2000;
-            display: flex; justify-content: center; align-items: center;
-            opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
-        }
-
-        .image-overlay.active { opacity: 1; pointer-events: auto; }
-
-        .expanded-image {
-            position: fixed; z-index: 2001; border-radius: 50%;
-            object-fit: cover; cursor: zoom-out; transform-origin: top left;
-            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-        }
-
-        .close-overlay {
-            position: absolute; top: 2rem; right: 2rem; width: 44px; height: 44px;
-            background: rgba(255, 255, 255, 0.1); border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            color: white; font-size: 1.5rem; cursor: pointer;
-            transition: background 0.2s; opacity: 0; transform: scale(0.8);
-        }
+        /* Journey Timeline */
+        .timeline { max-width: 800px; margin: 0 auto; position: relative; border-left: 2px solid var(--border); padding-left: 3rem; }
+        .timeline-item { position: relative; margin-bottom: 4rem; }
+        .timeline-dot { position: absolute; left: -3.45rem; top: 0; width: 12px; height: 12px; border-radius: 50%; background: white; border: 2px solid var(--primary); }
         
-        .image-overlay.active .close-overlay { opacity: 1; transform: scale(1); transition-delay: 0.3s; }
-        .close-overlay:hover { background: rgba(255, 255, 255, 0.2); }
-
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .cta-group { flex-direction: column; align-items: stretch; padding: 0 2rem; }
-            .contact-layout { grid-template-columns: 1fr; }
             nav ul { display: none; }
             .mobile-menu-btn { display: block; }
             nav ul.mobile-open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: white; padding: 2rem; border-bottom: 1px solid var(--border); box-shadow: var(--shadow-card); }
         }
-
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
     </style>
 </head>
 <body>
 
-    <div id="overlay" class="image-overlay">
-        <div class="close-overlay" id="closeOverlay">✕</div>
-    </div>
     <nav>
         <div class="container">
             <div class="logo">
-                <img src="profile_pic.jpeg" alt="Shrikant Kadu" class="nav-profile-pic" id="profileTrigger">
+                <img src="profile_pic.jpeg" alt="Shrikant Kadu" class="nav-profile-pic">
                 <a href="#" style="color: inherit; text-decoration: none; font-weight: 800;">Shrikant Kadu</a>
             </div>
-            
             <button class="mobile-menu-btn" id="menuToggle">☰</button>
-            
             <ul id="nav-menu">
                 <li><a href="#philosophy">Philosophy</a></li>
                 <li><a href="#journey">Journey</a></li>
@@ -293,43 +120,14 @@
 
     <section class="hero">
         <div class="container hero-content">
-            <h1>I <span style="color: #EF4444; -webkit-text-fill-color: #EF4444;">❤️</span> building products that<br>make life easier</h1>
-            <p class="tagline">Hands-on Product Leader</p>
-            <p class="description">
-                From viral consumer apps to billion-dollar fintech platforms to marketplace infrastructure at scale, I've deliberately sought out different types of hard problems across three continents to build adaptability, not just expertise in one domain.
-            </p>
-
-            <div class="companies">
-                <span class="label">Previously:</span>
-                <span class="company-tag">DoorDash (Wolt)</span>
-                <span class="company-tag">Paytm</span>
-                <span class="company-tag">eBay</span>
-                <span class="company-tag">Dailyhunt</span>
-                <span class="company-tag">Inbenta</span>
-            </div>
-
+            <h1>I <span style="color: #EF4444;">❤️</span> building products that make life easier</h1>
+            <p class="description">Hands-on Product Leader with global experience building fintech, marketplace, and AI products across three continents.</p>
             <div class="cta-group">
-                <a href="#journey" class="btn btn-primary">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M15 5l7 7-7 7"/></svg>
-                    View Journey
-                </a>
-
-                <a href="#prototypes" class="btn btn-lab">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4l3 9H7l3-9z"/><path d="M21.5 18a2.5 2.5 0 0 1-4.72 1.06 6.5 6.5 0 0 0-9.56 0A2.5 2.5 0 0 1 2.5 18"/></svg>
-                    Check My Lab
-                </a>
-
-                <a href="#writing" class="btn btn-secondary">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-                    Read Writing
-                </a>
+                <a href="#journey" class="btn btn-primary">View Journey</a>
+                <a href="#prototypes" class="btn btn-lab">Check My Lab</a>
+                <a href="#writing" class="btn btn-secondary">Read Writing</a>
             </div>
-            <a href="#podcast" class="podcast-hero-link">Also running "Beyond the Title" Podcast →</a>
-
-            <div class="scroll-down" onclick="document.getElementById('philosophy').scrollIntoView({behavior: 'smooth'})">
-                <span>Scroll to explore</span>
-                <span>↓</span>
-            </div>
+            <a href="#podcast" class="podcast-hero-link">Also running "Beyond the Title" Podcast on YouTube →</a>
         </div>
     </section>
 
@@ -339,203 +137,35 @@
                 <h2 class="section-title">How I Think</h2>
                 <p class="section-subtitle">Principles developed from building across startups, scale-ups, and global companies.</p>
             </div>
-            
             <div class="horizontal-scroller">
-                <div class="philosophy-card">
-                    <h3>Start from user reality</h3>
-                    <p>I've built consumer apps with 10M+ daily users, payment platforms for merchants in 4 countries, and enterprise B2B tools. The best insights come from watching users struggle, not reading dashboards.</p>
-                </div>
-                <div class="philosophy-card">
-                    <h3>Seek unfamiliar territory</h3>
-                    <p>Viral apps, regulated fintech, enterprise AI. I deliberately choose problems I haven't solved before. Range beats narrow expertise.</p>
-                </div>
-                <div class="philosophy-card">
-                    <h3>Constraints are fuel</h3>
-                    <p>The tightest constraints produce the best products. I learned this building in India where you can't throw money at problems.</p>
-                </div>
-                <div class="philosophy-card">
-                    <h3>Build systems, not heroes</h3>
-                    <p>Great product orgs run on clear processes, not heroic individual efforts. I build frameworks that scale beyond me.</p>
-                </div>
-                <div class="philosophy-card">
-                    <h3>Cross-functional empathy</h3>
-                    <p>I speak legal, ops, marketing, and engineering. Understanding everyone's constraints is the only way to ship complex products fast.</p>
-                </div>
+                <div class="philosophy-card"><h3>Start from user reality</h3><p>I've built consumer apps with 10M+ daily users. The best insights come from watching users struggle, not reading dashboards.</p></div>
+                <div class="philosophy-card"><h3>Seek unfamiliar territory</h3><p>Viral apps, regulated fintech, enterprise AI. I deliberately choose problems I haven't solved before.</p></div>
+                <div class="philosophy-card"><h3>Constraints are fuel</h3><p>The tightest constraints produce the best products. I learned this building in India where you can't throw money at problems.</p></div>
             </div>
         </div>
     </section>
 
     <section id="journey" class="journey">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">My Journey</h2>
-                <p class="section-subtitle">Building range through diverse problems across geographies and stages.</p>
-            </div>
-
+            <div class="section-header"><h2 class="section-title">My Journey</h2></div>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">2024 - 2025</span>
-                    <div class="timeline-content">
-                        <h3>Product Lead</h3>
-                        <div class="timeline-company">DoorDash (Wolt) • Berlin, Germany</div>
-                        <p class="timeline-desc">Lead category expansion beyond food delivery. Grocery, drone delivery, and new verticals in global markets.</p>
-                        <div class="tags">
-                            <span class="tag">Global Markets</span>
-                            <span class="tag">New Verticals</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">2022 - 2024</span>
-                    <div class="timeline-content">
-                        <h3>Director of Product Management</h3>
-                        <div class="timeline-company">Paytm • Bangalore, India</div>
-                        <p class="timeline-desc">Owned credit card products driving billion $ in GMV. Built a team of 4 PMs and navigated complex banking regulations.</p>
-                        <div class="tags">
-                            <span class="tag">Fintech</span>
-                            <span class="tag">Leadership</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">2021 - 2022</span>
-                    <div class="timeline-content">
-                        <h3>Senior Product Manager</h3>
-                        <div class="timeline-company">Dailyhunt (Josh) • Bangalore, India</div>
-                        <p class="timeline-desc">Scaled India's short-video app to 10M+ DAU. Deep dive into viral mechanics and creator economy.</p>
-                        <div class="tags">
-                            <span class="tag">Social</span>
-                            <span class="tag">Growth</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">2019 - 2021</span>
-                    <div class="timeline-content">
-                        <h3>Senior Product Manager</h3>
-                        <div class="timeline-company">eBay / StubHub • San Francisco Bay Area, USA</div>
-                        <p class="timeline-desc">Payments infrastructure for 80k sellers and growth optimization for ticketing marketplace.</p>
-                        <div class="tags">
-                            <span class="tag">Marketplace</span>
-                            <span class="tag">Payments</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-date">2016 - 2019</span>
-                    <div class="timeline-content">
-                        <h3>Product Manager (First Product Hire)</h3>
-                        <div class="timeline-company">Inbenta • San Francisco Bay Area, USA</div>
-                        <p class="timeline-desc">Joined as first PM. Built search and chatbot products using symbolic AI. Scaled product org from 0 to 1.</p>
-                        <div class="tags">
-                            <span class="tag">AI/ML</span>
-                            <span class="tag">B2B SaaS</span>
-                            <span class="tag">0 to 1</span>
-                        </div>
-                    </div>
-                </div>
+                <div class="timeline-item"><div class="timeline-dot"></div><h3>Product Lead</h3><p>DoorDash (Wolt) • Berlin, Germany</p></div>
+                <div class="timeline-item"><div class="timeline-dot"></div><h3>Director of Product Management</h3><p>Paytm • Bangalore, India</p></div>
+                <div class="timeline-item"><div class="timeline-dot"></div><h3>Senior Product Manager</h3><p>eBay / StubHub • SF Bay Area, USA</p></div>
             </div>
         </div>
     </section>
 
-    <section id="prototypes" class="prototypes">
+    <section id="prototypes" class="prototypes" style="background:var(--bg-section)">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">The Laboratory</h2>
                 <p class="section-subtitle">Side projects, weekend builds, and experiments.</p>
             </div>
-
-            <div class="disclaimer-box">
-                <span style="font-size: 1.5rem">🧪</span>
-                <div>
-                    <strong>Uncooked Ideas:</strong> These are prototypes I'm tinkering with. They aren't polished products; you might find bugs, but you'll also find fresh ideas.
-                </div>
-            </div>
-
-            <div class="prototype-grid">
-                
-                <a href="https://lennys-wisdom-wall.vercel.app/" target="_blank" rel="noopener" class="prototype-card">
-                    <div class="prototype-header">
-                        <span class="prototype-title">Wisdom Wall</span>
-                        <span class="prototype-icon">🧱</span>
-                    </div>
-                    <p class="prototype-desc">A curated wisdom graph built by synthesizing 250+ transcripts from Lenny's Podcast into actionable product wisdom.</p>
-                    <div class="prototype-meta">
-                        <span class="tech-tag">LLM Analysis</span>
-                        <span class="tech-tag">Vercel</span>
-                        <span class="tech-tag">Product Ops</span>
-                    </div>
-                </a>
-
-                <a href="https://shri816.github.io/forest-arena-game/" target="_blank" rel="noopener" class="prototype-card">
-                    <div class="prototype-header">
-                        <span class="prototype-title">Forest Arena Fighter</span>
-                        <span class="prototype-icon">⚔️</span>
-                    </div>
-                    <p class="prototype-desc">A playful and engaging fighter game made for fun. Experiments with sprite animations and physics—fully playable on desktop and mobile.</p>
-                    <div class="prototype-meta">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Canvas API</span>
-                        <span class="tech-tag">Cross-Device Gaming</span>
-                    </div>
-                </a>
-
-                <a href="https://chromewebstore.google.com/detail/year-in-progress/kooonhjgponapijpokpfmjbjijdhlaae" target="_blank" rel="noopener" class="prototype-card">
-                    <div class="prototype-header">
-                        <span class="prototype-title">Year in Progress</span>
-                        <span class="prototype-icon">⏳</span>
-                    </div>
-                    <p class="prototype-desc">A minimal Chrome extension that visualizes the current year's progression to help maintain perspective on time.</p>
-                    <div class="prototype-meta">
-                        <span class="tech-tag">Chrome Ext</span>
-                        <span class="tech-tag">Visualization</span>
-                    </div>
-                </a>
-
-                <a href="https://chromewebstore.google.com/detail/screen-time-tracker/jgplahepdhlogaohgdobhaddhppklfkg" target="_blank" class="prototype-card">
-                    <div class="prototype-header">
-                        <span class="prototype-title">Screen Time Tracker</span>
-                        <span class="prototype-icon">⏱️</span>
-                    </div>
-                    <p class="prototype-desc">A Chrome extension to manage digital wellbeing by tracking and visualizing your browsing habits.</p>
-                    <div class="prototype-meta">
-                        <span class="tech-tag">Chrome Ext</span>
-                        <span class="tech-tag">Productivity</span>
-                    </div>
-                </a>
-
-                <a href="https://chromewebstore.google.com/detail/task-taker/ndalnngmmkbgfenmgcgljllbjddeldjn" target="_blank" class="prototype-card">
-                    <div class="prototype-header">
-                        <span class="prototype-title">Task Taker</span>
-                        <span class="prototype-icon">✅</span>
-                    </div>
-                    <p class="prototype-desc">Lightweight browser extension to capture tasks quickly without switching context tabs.</p>
-                    <div class="prototype-meta">
-                        <span class="tech-tag">Chrome Ext</span>
-                        <span class="tech-tag">Utility</span>
-                    </div>
-                </a>
-
-                <a href="https://shri816.github.io/crunchyqr/" target="_blank" class="prototype-card">
-                    <div class="prototype-header">
-                        <span class="prototype-title">CrunchyQR</span>
-                        <span class="prototype-icon">🔳</span>
-                    </div>
-                    <p class="prototype-desc">Aesthetic QR code generator. Create scannable, styled codes for your links.</p>
-                    <div class="prototype-meta">
-                        <span class="tech-tag">Web App</span>
-                        <span class="tech-tag">Design</span>
-                    </div>
-                </a>
+            <div class="writing-grid">
+                <a href="https://lennys-wisdom-wall.vercel.app/" class="article-card"><h3>Wisdom Wall</h3><p>Synthesizing actionable product wisdom from 250+ transcripts.</p></a>
+                <a href="https://shri816.github.io/crunchyqr/" class="article-card"><h3>CrunchyQR</h3><p>Aesthetic QR code generator for scannable, styled links.</p></a>
+                <a href="https://shri816.github.io/forest-arena-game/" class="article-card"><h3>Forest Arena Fighter</h3><p>Playful fighter game experimenting with sprite animations.</p></a>
             </div>
         </div>
     </section>
@@ -543,46 +173,29 @@
     <section id="writing" class="writing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Selected Writing</h2>
-                <p class="section-subtitle">Deep dives on product strategy, execution, and team building.</p>
+                <h2 class="section-title">Selected Writing & Media</h2>
+                <p class="section-subtitle">Deep dives on product strategy, cross-functional execution, and team building.</p>
             </div>
-
             <div class="writing-grid">
-                <a href="https://substack.com/@shrikantkadu/p-180574864" target="_blank" class="article-card">
-                    <div class="article-meta">
-                        <span class="article-icon">🔮</span>
-                        <span class="article-platform">Substack</span>
-                    </div>
-                    <div class="article-title">The Future of Work and Human Value in an AI World</div>
-                    <span class="article-link-text">Read Article →</span>
-                </a>
+                <a href="https://substack.com/@shrikantkadu/p-180574864" target="_blank" class="article-card"><div class="article-meta"><span class="article-platform">Substack</span></div><div class="article-title">The Future of Work and Human Value in an AI World</div><span class="article-link-text">Read Article →</span></a>
                 
-                <a href="https://shrikant414.substack.com/p/how-we-scaled-josh-to-10-million" target="_blank" class="article-card">
-                    <div class="article-meta">
-                        <span class="article-icon">📄</span>
-                        <span class="article-platform">Substack</span>
-                    </div>
-                    <div class="article-title">How We Scaled Josh to 10 Million DAU: Localization Lessons</div>
-                    <span class="article-link-text">Read Article →</span>
-                </a>
+                <a href="https://www.youtube.com/watch?v=R4AbQrHL77Q" target="_blank" class="article-card"><div class="article-meta"><span class="article-platform">YouTube / eBay</span></div><div class="article-title">Webinar: Working Cross-Functionally as a PM (eBay)</div><span class="article-link-text">Watch Presentation →</span></a>
+                
+                <a href="https://shrikant414.substack.com/p/how-we-scaled-josh-to-10-million" target="_blank" class="article-card"><div class="article-meta"><span class="article-platform">Substack</span></div><div class="article-title">How We Scaled Josh to 10 Million DAU: Localization Lessons</div><span class="article-link-text">Read Article →</span></a>
+                
+                <a href="https://shrikantkadu.medium.com/writing-product-vision-roadmap-documents-318f5a08f3ae" target="_blank" class="article-card"><div class="article-meta"><span class="article-platform">Medium</span></div><div class="article-title">Writing product vision & roadmap documents</div><span class="article-link-text">Read Article →</span></a>
+                
+                <a href="https://shrikantkadu.medium.com/building-a-stellar-team-of-product-managers-cd45b9c24a9c" target="_blank" class="article-card"><div class="article-meta"><span class="article-platform">Medium</span></div><div class="article-title">Building a stellar team of product managers</div><span class="article-link-text">Read Article →</span></a>
 
-                <a href="https://shrikantkadu.medium.com/writing-product-vision-roadmap-documents-318f5a08f3ae" target="_blank" class="article-card">
-                    <div class="article-meta">
-                        <span class="article-icon">✍️</span>
-                        <span class="article-platform">Medium</span>
-                    </div>
-                    <div class="article-title">Writing product vision & roadmap documents</div>
-                    <span class="article-link-text">Read Article →</span>
-                </a>
+                <a href="https://shrikantkadu.medium.com/vision-and-roadmap-of-an-ai-product-e4693c73d5a3" target="_blank" class="article-card"><div class="article-meta"><span class="article-platform">Medium</span></div><div class="article-title">Vision and Roadmap of an AI product</div><span class="article-link-text">Read Article →</span></a>
 
-                <a href="https://shrikantkadu.medium.com/building-a-stellar-team-of-product-managers-cd45b9c24a9c" target="_blank" class="article-card">
-                    <div class="article-meta">
-                        <span class="article-icon">👥</span>
-                        <span class="article-platform">Medium</span>
-                    </div>
-                    <div class="article-title">Building a stellar team of product managers</div>
-                    <span class="article-link-text">Read Article →</span>
-                </a>
+                <a href="https://www.linkedin.com/posts/shrikant-g-kadu_userbehavior-contentdiscovery-streaming-activity-7362069191635451904-Y4wP" target="_blank" class="article-card"><div class="article-meta"><span class="article-platform">LinkedIn</span></div><div class="article-title">Content Discovery & Streaming Activity</div><span class="article-link-text">Read Post →</span></a>
+
+                <a href="https://shrikantkadu.medium.com/values-of-product-management-24be66b62e00" target="_blank" class="article-card"><div class="article-meta"><span class="article-platform">Medium</span></div><div class="article-title">Values of Product Management</div><span class="article-link-text">Read Article →</span></a>
+
+                <a href="https://shrikant414.substack.com/p/from-zero-to-one-building-innovative" target="_blank" class="article-card"><div class="article-meta"><span class="article-platform">Substack</span></div><div class="article-title">From Zero to One: Building Innovative Products That Scale</div><span class="article-link-text">Read Article →</span></a>
+
+                <a href="https://www.linkedin.com/posts/shrikant-g-kadu_lenny-rachitsky-just-released-transcripts-activity-7417180487586144256-Pw-h" target="_blank" class="article-card"><div class="article-meta"><span class="article-platform">LinkedIn</span></div><div class="article-title">Building the Wisdom Wall: Synthesizing Lenny's Podcast Transcripts</div><span class="article-link-text">Read Post →</span></a>
             </div>
         </div>
     </section>
@@ -591,200 +204,57 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Beyond the Title</h2>
-                <p class="section-subtitle">A podcast uncovering the routines, skill sets, and actions that drive impact underneath job titles.</p>
+                <p class="section-subtitle">A YouTube series uncovering the routines and actions that drive impact underneath job titles.</p>
             </div>
-
             <div class="episode-grid">
-                <a href="https://www.youtube.com/watch?v=R4AbQrHL77Q" target="_blank" class="episode-card">
-                    <img src="https://img.youtube.com/vi/R4AbQrHL77Q/maxresdefault.jpg" alt="Episode Thumbnail" class="episode-thumb">
+                <a href="https://www.youtube.com/watch?v=WCOX_AX6Pm8&t=10s" target="_blank" class="episode-card">
+                    <img src="https://img.youtube.com/vi/WCOX_AX6Pm8/maxresdefault.jpg" class="episode-thumb">
                     <div class="episode-body">
-                        <div class="episode-title">Decoding Cross-Functional Mastery</div>
-                        <p class="episode-desc">A deep dive into how PMs navigate ambiguity across engineering, design, and business teams at global scale.</p>
+                        <div class="episode-title">The Routine of a Senior Product Leader</div>
                         <span class="btn-play">▶ Watch Episode</span>
                     </div>
                 </a>
-
-                <a href="https://www.youtube.com/@Beyond-The-Title" target="_blank" class="episode-card">
-                    <div class="episode-thumb" style="display: flex; align-items: center; justify-content: center; background: #eee;">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="#666"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                    </div>
-                    <div class="episode-body" style="background: var(--text-main); color: white;">
-                        <div class="episode-title" style="color: white;">Browse All Episodes</div>
-                        <p class="episode-desc" style="color: #9CA3AF;">Catch the full series of conversations on YouTube, Spotify, and Apple Podcasts.</p>
-                        <span class="btn-play" style="color: white;">Visit Channel →</span>
+                <a href="https://www.youtube.com/watch?v=biaEDWhBgsI&t=17s" target="_blank" class="episode-card">
+                    <img src="https://img.youtube.com/vi/biaEDWhBgsI/maxresdefault.jpg" class="episode-thumb">
+                    <div class="episode-body">
+                        <div class="episode-title">Breaking Down the Skill Set of a PM</div>
+                        <span class="btn-play">▶ Watch Episode</span>
                     </div>
                 </a>
+                <a href="https://www.youtube.com/watch?v=4heVbkLkC4s&t=4s" target="_blank" class="episode-card">
+                    <img src="https://img.youtube.com/vi/4heVbkLkC4s/maxresdefault.jpg" class="episode-thumb">
+                    <div class="episode-body">
+                        <div class="episode-title">Taking Action: From Strategy to Result</div>
+                        <span class="btn-play">▶ Watch Episode</span>
+                    </div>
+                </a>
+            </div>
+            <div style="text-align:center; margin-top:3rem;">
+                <a href="https://www.youtube.com/@Beyond-The-Title" target="_blank" class="btn btn-primary" style="background:var(--youtube-red)">Subscribe to Channel</a>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Let's Connect</h2>
-            </div>
-            
-            <div class="contact-layout">
-                <div>
-                    <p style="margin-bottom: 2rem; color: var(--text-secondary); line-height: 1.7;">
-                        Whether you're looking for a product leader, want to collaborate, or just chat about the industry.
-                    </p>
-                    <a href="mailto:shri.kadu13@gmail.com" class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <div>
-                            <div style="font-weight: 600; color: var(--text-main)">Email</div>
-                            <div style="color: var(--text-secondary)">shri.kadu13@gmail.com</div>
-                        </div>
-                    </a>
-                    <a href="https://www.linkedin.com/in/shrikant-g-kadu/" target="_blank" class="contact-item">
-                        <span class="contact-icon">💼</span>
-                        <div>
-                            <div style="font-weight: 600; color: var(--text-main)">LinkedIn</div>
-                            <div style="color: var(--text-secondary)">Connect professionally</div>
-                        </div>
-                    </a>
+            <div class="section-header"><h2 class="section-title">Let's Connect</h2></div>
+            <div style="text-align:center">
+                <p style="color:var(--text-secondary); margin-bottom:2rem;">Whether you're looking for a product leader, want to collaborate, or just chat about the industry.</p>
+                <div class="cta-group">
+                    <a href="mailto:shri.kadu13@gmail.com" class="btn btn-primary">Email Me</a>
+                    <a href="https://www.linkedin.com/in/shrikant-g-kadu/" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
                 </div>
-
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label class="form-label">Name</label>
-                        <input type="text" class="form-input" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-input" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-input" id="message" style="height: 120px" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-name">Shrikant Kadu</div>
-                <div class="footer-desc">Product Leader • Built for stories, not resumes.</div>
-                
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/shrikant-g-kadu/" target="_blank" class="social-link" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <a href="https://x.com/shrikant_kadu" target="_blank" class="social-link" aria-label="X (Twitter)">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    </a>
-                    <a href="https://shrikantkadu.medium.com/" target="_blank" class="social-link" aria-label="Medium">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0v24h24V0H0zm19.938 5.686L18.651 4.4a.79.79 0 0 0-.83.076l-2.69 1.917v10.56l2.673 2.657c.22.218.66.191.847-.053l1.287-1.754V5.686zm-12.245 1.6l-3.375-2.4a.79.79 0 0 0-.829-.076L2.2 5.927v12.117l1.287 1.754c.187.244.627.271.847.053l2.673-2.657V7.286h.686zm1.313 10.424l4.137-6.935L9.006 3.84v13.87z"/></svg>
-                    </a>
-                    <a href="https://www.youtube.com/@Beyond-The-Title" target="_blank" class="social-link" aria-label="YouTube">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <script>
         const menuBtn = document.getElementById('menuToggle');
         const navMenu = document.getElementById('nav-menu');
-        const navLinks = document.querySelectorAll('#nav-menu a');
-
         menuBtn.addEventListener('click', () => { navMenu.classList.toggle('mobile-open'); });
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !menuBtn.contains(e.target) && navMenu.classList.contains('mobile-open')) {
-                navMenu.classList.remove('mobile-open');
-            }
-        });
-
-        navLinks.forEach(link => {
+        document.querySelectorAll('#nav-menu a').forEach(link => {
             link.addEventListener('click', () => { navMenu.classList.remove('mobile-open'); });
         });
-
-        const sections = document.querySelectorAll('section');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (window.pageYOffset >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            navLinks.forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href') === '#' + current) {
-                    a.classList.add('active');
-                }
-            });
-        });
-
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const msg = document.getElementById('message').value;
-            window.location.href = `mailto:shri.kadu13@gmail.com?subject=Contact from ${name}&body=${msg}%0D%0A%0D%0AFrom: ${email}`;
-        });
-
-        const trigger = document.getElementById('profileTrigger');
-        const overlay = document.getElementById('overlay');
-        const closeBtn = document.getElementById('closeOverlay');
-        let activeImage = null;
-
-        trigger.addEventListener('click', () => {
-            const rect = trigger.getBoundingClientRect();
-            const clone = document.createElement('img');
-            clone.src = trigger.src;
-            clone.classList.add('expanded-image');
-            clone.style.top = `${rect.top}px`;
-            clone.style.left = `${rect.left}px`;
-            clone.style.width = `${rect.width}px`;
-            clone.style.height = `${rect.height}px`;
-            
-            document.body.appendChild(clone);
-            trigger.classList.add('hidden');
-            overlay.classList.add('active');
-            document.body.classList.add('no-scroll');
-            activeImage = clone;
-            clone.getBoundingClientRect(); 
-
-            const finalSize = Math.min(window.innerWidth * 0.8, 500);
-            const finalTop = (window.innerHeight - finalSize) / 2;
-            const finalLeft = (window.innerWidth - finalSize) / 2;
-
-            clone.style.top = `${finalTop}px`;
-            clone.style.left = `${finalLeft}px`;
-            clone.style.width = `${finalSize}px`;
-            clone.style.height = `${finalSize}px`;
-            clone.style.borderRadius = '12px';
-        });
-
-        function closeImage() {
-            if (!activeImage) return;
-            overlay.classList.remove('active');
-            document.body.classList.remove('no-scroll');
-            const rect = trigger.getBoundingClientRect();
-            activeImage.style.top = `${rect.top}px`;
-            activeImage.style.left = `${rect.left}px`;
-            activeImage.style.width = `${rect.width}px`;
-            activeImage.style.height = `${rect.height}px`;
-            activeImage.style.borderRadius = '50%';
-            setTimeout(() => {
-                if (activeImage) {
-                    activeImage.remove();
-                    activeImage = null;
-                }
-                trigger.classList.remove('hidden');
-            }, 500);
-        }
-
-        closeBtn.addEventListener('click', closeImage);
-        overlay.addEventListener('click', (e) => { if (e.target === overlay) closeImage(); });
-        window.addEventListener('scroll', () => { if(activeImage) closeImage(); });
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeImage(); });
     </script>
 </body>
 </html>

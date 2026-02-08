@@ -43,7 +43,8 @@
         "https://www.linkedin.com/in/shrikant-g-kadu/",
         "https://x.com/shrikant_kadu",
         "https://shrikantkadu.medium.com/",
-        "https://github.com/shri816"
+        "https://github.com/shri816",
+        "https://www.youtube.com/@Beyond-The-Title"
       ]
     }
     </script>
@@ -71,6 +72,7 @@
             --nav-bg: rgba(255, 255, 255, 0.95);
             --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --youtube-red: #FF0000;
         }
 
         html { scroll-behavior: smooth; scroll-padding-top: 100px; }
@@ -158,9 +160,43 @@
         .philosophy-card { flex: 0 0 360px; scroll-snap-align: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; transition: all 0.3s ease; }
         .philosophy-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--primary); }
         .philosophy-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; }
+
+        /* 🎙️ PODCAST SECTION */
+        .podcast { background: var(--bg-section); }
+        .podcast-container { 
+            display: grid; 
+            grid-template-columns: 1.2fr 1fr; 
+            gap: 3rem; 
+            align-items: center; 
+            background: var(--bg-card); 
+            padding: 3rem; 
+            border-radius: 20px; 
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-card);
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .podcast-content h3 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-main); }
+        .podcast-content p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem; }
+        .btn-youtube { background: var(--youtube-red); color: white; }
+        .btn-youtube:hover { background: #CC0000; transform: translateY(-1px); color: white; }
         
         /* 🗺️ JOURNEY & PROTOTYPES & WRITING */
-        .journey { background: var(--bg-section); }
+        .journey { background: var(--bg-page); }
         .timeline { max-width: 800px; margin: 0 auto; position: relative; }
         .timeline::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 2px; background: var(--border); }
         .timeline-item { position: relative; padding-left: 3rem; margin-bottom: 4rem; }
@@ -169,9 +205,9 @@
         .timeline-content h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; }
         .timeline-company { font-size: 1.125rem; color: var(--text-secondary); font-weight: 500; margin-bottom: 1rem; }
         .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .tag { font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; background: white; border: 1px solid var(--border); border-radius: 100px; color: var(--text-secondary); }
+        .tag { font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; background: var(--bg-section); border: 1px solid var(--border); border-radius: 100px; color: var(--text-secondary); }
 
-        .prototypes { background: var(--bg-page); }
+        .prototypes { background: var(--bg-section); }
         .disclaimer-box { background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 8px; padding: 1rem 1.5rem; margin: 0 auto 3rem auto; max-width: 700px; color: #92400E; font-size: 0.95rem; display: flex; align-items: center; gap: 1rem; }
         .prototype-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
         .prototype-card { background: white; border: 1px dashed var(--text-tertiary); border-radius: 12px; padding: 1.5rem; text-decoration: none; transition: all 0.2s ease; display: flex; flex-direction: column; height: 100%; }
@@ -183,7 +219,7 @@
         .prototype-meta { margin-top: auto; display: flex; gap: 0.5rem; }
         .tech-tag { font-size: 0.7rem; font-weight: 600; color: var(--text-tertiary); background: var(--bg-section); padding: 2px 8px; border-radius: 4px; }
 
-        .writing { background: var(--bg-section); } 
+        .writing { background: var(--bg-page); } 
         .writing-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
         .article-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; text-decoration: none; transition: all 0.2s ease; display: flex; flex-direction: column; height: 100%; }
         .article-card:hover { border-color: var(--text-main); box-shadow: var(--shadow-card); transform: translateY(-2px); }
@@ -191,7 +227,7 @@
         .article-title { font-size: 1.125rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; line-height: 1.4; }
         .article-link-text { margin-top: auto; padding-top: 1rem; font-size: 0.875rem; font-weight: 600; color: var(--primary); display: flex; align-items: center; gap: 0.25rem; }
 
-        .contact { background: var(--bg-page); }
+        .contact { background: var(--bg-section); }
         .contact-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; }
         .contact-item { display: flex; gap: 1rem; padding: 1.5rem; background: white; border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border); text-decoration: none; transition: box-shadow 0.2s; }
         .contact-item:hover { box-shadow: var(--shadow-card); }
@@ -244,6 +280,7 @@
             .hero h1 { font-size: 2.5rem; }
             .cta-group { flex-direction: column; align-items: stretch; padding: 0 2rem; }
             .contact-layout { grid-template-columns: 1fr; }
+            .podcast-container { grid-template-columns: 1fr; padding: 1.5rem; }
             nav ul { display: none; }
             .mobile-menu-btn { display: block; }
             nav ul.mobile-open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: white; padding: 2rem; border-bottom: 1px solid var(--border); box-shadow: var(--shadow-card); }
@@ -269,6 +306,7 @@
             
             <ul id="nav-menu">
                 <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#podcast">Podcast</a></li>
                 <li><a href="#journey">Journey</a></li>
                 <li><a href="#prototypes">Lab</a></li>
                 <li><a href="#writing">Writing</a></li>
@@ -300,14 +338,14 @@
                     View Journey
                 </a>
 
+                <a href="#podcast" class="btn btn-secondary" style="border-color: var(--youtube-red); color: var(--youtube-red);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    Listen to Podcast
+                </a>
+
                 <a href="#prototypes" class="btn btn-lab">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4l3 9H7l3-9z"/><path d="M21.5 18a2.5 2.5 0 0 1-4.72 1.06 6.5 6.5 0 0 0-9.56 0A2.5 2.5 0 0 1 2.5 18"/></svg>
                     Check My Lab
-                </a>
-
-                <a href="#writing" class="btn btn-secondary">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-                    Read Writing
                 </a>
             </div>
 
@@ -345,6 +383,31 @@
                 <div class="philosophy-card">
                     <h3>Cross-functional empathy</h3>
                     <p>I speak legal, ops, marketing, and engineering. Understanding everyone's constraints is the only way to ship complex products fast.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="podcast" class="podcast">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Beyond the Title</h2>
+                <p class="section-subtitle">A podcast uncovering the routines, skill sets, and actions that drive impact underneath job titles.</p>
+            </div>
+
+            <div class="podcast-container">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=Beyond-The-Title" title="Beyond The Title Podcast" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="podcast-content">
+                    <h3>Decoding Professional Mastery</h3>
+                    <p>Most people see the title, but few see the craft. In this series, I talk with leaders and builders to deconstruct exactly how they navigate ambiguity and ship results.</p>
+                    <div class="cta-group" style="justify-content: flex-start;">
+                        <a href="https://www.youtube.com/@Beyond-The-Title" target="_blank" class="btn btn-youtube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                            Subscribe on YouTube
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -728,6 +791,10 @@
 
                     <a href="https://shrikantkadu.medium.com/" target="_blank" class="social-link" aria-label="Medium">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0v24h24V0H0zm19.938 5.686L18.651 4.4a.79.79 0 0 0-.83.076l-2.69 1.917v10.56l2.673 2.657c.22.218.66.191.847-.053l1.287-1.754V5.686zm-12.245 1.6l-3.375-2.4a.79.79 0 0 0-.829-.076L2.2 5.927v12.117l1.287 1.754c.187.244.627.271.847.053l2.673-2.657V7.286h.686zm1.313 10.424l4.137-6.935L9.006 3.84v13.87z"/></svg>
+                    </a>
+
+                    <a href="https://www.youtube.com/@Beyond-The-Title" target="_blank" class="social-link" aria-label="YouTube">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                     </a>
                 </div>
             </div>

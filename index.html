@@ -140,7 +140,7 @@
         .company-tag { padding: 0.4rem 0.8rem; background: var(--bg-section); border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); }
 
         /* 🔘 BUTTONS */
-        .cta-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 3rem; }
+        .cta-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; }
         .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; transition: all 0.2s ease; text-decoration: none; gap: 0.6rem; border: 1px solid transparent; }
         .btn-primary { background: var(--text-main); color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .btn-primary:hover { background: #000000; transform: translateY(-1px); }
@@ -149,7 +149,19 @@
         .btn-secondary { background: transparent; color: var(--text-secondary); border-color: #E5E7EB; }
         .btn-secondary:hover { border-color: var(--text-main); color: var(--text-main); background: white; transform: translateY(-1px); }
         
-        .scroll-down { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: var(--text-tertiary); font-size: 0.875rem; font-weight: 500; cursor: pointer; animation: bounce 2s infinite; }
+        .podcast-hero-link { display: inline-block; font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; margin-bottom: 3rem; }
+        .podcast-hero-link:hover { color: var(--youtube-red); }
+
+        /* 🎙️ PODCAST SECTION */
+        .podcast { background: var(--bg-section); }
+        .episode-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+        .episode-card { background: white; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; transition: all 0.3s ease; display: flex; flex-direction: column; }
+        .episode-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: var(--youtube-red); }
+        .episode-thumb { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-bottom: 1px solid var(--border); }
+        .episode-body { padding: 1.25rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .episode-title { font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.75rem; line-height: 1.4; }
+        .episode-desc { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; flex-grow: 1; }
+        .btn-play { font-size: 0.85rem; font-weight: 700; color: var(--youtube-red); display: flex; align-items: center; gap: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
 
         /* 💡 PHILOSOPHY */
         .philosophy { background: var(--bg-page); overflow: hidden; padding-top: 2rem; }
@@ -160,40 +172,6 @@
         .philosophy-card { flex: 0 0 360px; scroll-snap-align: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; transition: all 0.3s ease; }
         .philosophy-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--primary); }
         .philosophy-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; }
-
-        /* 🎙️ PODCAST SECTION */
-        .podcast { background: var(--bg-section); }
-        .podcast-container { 
-            display: grid; 
-            grid-template-columns: 1.2fr 1fr; 
-            gap: 3rem; 
-            align-items: center; 
-            background: var(--bg-card); 
-            padding: 3rem; 
-            border-radius: 20px; 
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-card);
-        }
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            background: #000;
-        }
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        .podcast-content h3 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-main); }
-        .podcast-content p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem; }
-        .btn-youtube { background: var(--youtube-red); color: white; }
-        .btn-youtube:hover { background: #CC0000; transform: translateY(-1px); color: white; }
         
         /* 🗺️ JOURNEY & PROTOTYPES & WRITING */
         .journey { background: var(--bg-page); }
@@ -227,9 +205,9 @@
         .article-title { font-size: 1.125rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; line-height: 1.4; }
         .article-link-text { margin-top: auto; padding-top: 1rem; font-size: 0.875rem; font-weight: 600; color: var(--primary); display: flex; align-items: center; gap: 0.25rem; }
 
-        .contact { background: var(--bg-section); }
+        .contact { background: var(--bg-page); }
         .contact-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; }
-        .contact-item { display: flex; gap: 1rem; padding: 1.5rem; background: white; border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border); text-decoration: none; transition: box-shadow 0.2s; }
+        .contact-item { display: flex; gap: 1rem; padding: 1.5rem; background: var(--bg-section); border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border); text-decoration: none; transition: box-shadow 0.2s; }
         .contact-item:hover { box-shadow: var(--shadow-card); }
         .contact-form { background: white; padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border); box-shadow: var(--shadow-card); }
         .form-group { margin-bottom: 1.5rem; }
@@ -275,12 +253,10 @@
         .image-overlay.active .close-overlay { opacity: 1; transform: scale(1); transition-delay: 0.3s; }
         .close-overlay:hover { background: rgba(255, 255, 255, 0.2); }
 
-        /* Mobile Adjustments */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .cta-group { flex-direction: column; align-items: stretch; padding: 0 2rem; }
             .contact-layout { grid-template-columns: 1fr; }
-            .podcast-container { grid-template-columns: 1fr; padding: 1.5rem; }
             nav ul { display: none; }
             .mobile-menu-btn { display: block; }
             nav ul.mobile-open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: white; padding: 2rem; border-bottom: 1px solid var(--border); box-shadow: var(--shadow-card); }
@@ -306,10 +282,10 @@
             
             <ul id="nav-menu">
                 <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#podcast">Podcast</a></li>
                 <li><a href="#journey">Journey</a></li>
                 <li><a href="#prototypes">Lab</a></li>
                 <li><a href="#writing">Writing</a></li>
+                <li><a href="#podcast">Podcast</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -338,16 +314,17 @@
                     View Journey
                 </a>
 
-                <a href="#podcast" class="btn btn-secondary" style="border-color: var(--youtube-red); color: var(--youtube-red);">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                    Listen to Podcast
-                </a>
-
                 <a href="#prototypes" class="btn btn-lab">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4l3 9H7l3-9z"/><path d="M21.5 18a2.5 2.5 0 0 1-4.72 1.06 6.5 6.5 0 0 0-9.56 0A2.5 2.5 0 0 1 2.5 18"/></svg>
                     Check My Lab
                 </a>
+
+                <a href="#writing" class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    Read Writing
+                </a>
             </div>
+            <a href="#podcast" class="podcast-hero-link">Also running "Beyond the Title" Podcast →</a>
 
             <div class="scroll-down" onclick="document.getElementById('philosophy').scrollIntoView({behavior: 'smooth'})">
                 <span>Scroll to explore</span>
@@ -383,31 +360,6 @@
                 <div class="philosophy-card">
                     <h3>Cross-functional empathy</h3>
                     <p>I speak legal, ops, marketing, and engineering. Understanding everyone's constraints is the only way to ship complex products fast.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="podcast" class="podcast">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Beyond the Title</h2>
-                <p class="section-subtitle">A podcast uncovering the routines, skill sets, and actions that drive impact underneath job titles.</p>
-            </div>
-
-            <div class="podcast-container">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=Beyond-The-Title" title="Beyond The Title Podcast" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="podcast-content">
-                    <h3>Decoding Professional Mastery</h3>
-                    <p>Most people see the title, but few see the craft. In this series, I talk with leaders and builders to deconstruct exactly how they navigate ambiguity and ship results.</p>
-                    <div class="cta-group" style="justify-content: flex-start;">
-                        <a href="https://www.youtube.com/@Beyond-The-Title" target="_blank" class="btn btn-youtube">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                            Subscribe on YouTube
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -584,43 +536,6 @@
                         <span class="tech-tag">Design</span>
                     </div>
                 </a>
-
-                <a href="https://deft-basbousa-5c83c7.netlify.app/" target="_blank" class="prototype-card">
-                    <div class="prototype-header">
-                        <span class="prototype-title">Stream Scout</span>
-                        <span class="prototype-icon">🎬</span>
-                    </div>
-                    <p class="prototype-desc">Smart content discovery portal to solve the "what to watch" paralysis across platforms.</p>
-                    <div class="prototype-meta">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">API</span>
-                    </div>
-                </a>
-
-                <a href="https://lighthearted-pasca-a0c5a3.netlify.app/" target="_blank" class="prototype-card">
-                    <div class="prototype-header">
-                        <span class="prototype-title">TweetRadar</span>
-                        <span class="prototype-icon">🐦</span>
-                    </div>
-                    <p class="prototype-desc">A tool to surface insightful tweets and cut through the noise of the timeline.</p>
-                    <div class="prototype-meta">
-                        <span class="tech-tag">Social</span>
-                        <span class="tech-tag">Discovery</span>
-                    </div>
-                </a>
-
-                <a href="https://shri816.github.io/shrikant-kadu-journey/" target="_blank" class="prototype-card">
-                    <div class="prototype-header">
-                        <span class="prototype-title">Interactive Journey</span>
-                        <span class="prototype-icon">🗺️</span>
-                    </div>
-                    <p class="prototype-desc">A visual experiment in storytelling to showcase career progression.</p>
-                    <div class="prototype-meta">
-                        <span class="tech-tag">Web</span>
-                        <span class="tech-tag">Portfolio</span>
-                    </div>
-                </a>
-
             </div>
         </div>
     </section>
@@ -633,7 +548,6 @@
             </div>
 
             <div class="writing-grid">
-                
                 <a href="https://substack.com/@shrikantkadu/p-180574864" target="_blank" class="article-card">
                     <div class="article-meta">
                         <span class="article-icon">🔮</span>
@@ -643,15 +557,6 @@
                     <span class="article-link-text">Read Article →</span>
                 </a>
                 
-                <a href="https://www.linkedin.com/posts/shrikant-g-kadu_userbehavior-contentdiscovery-streaming-activity-7362069191635451904-Y4wP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB9yxR0BGf2OraMD1nPKk6hnNVP3Vz_ssxk" target="_blank" class="article-card">
-                    <div class="article-meta">
-                        <span class="article-icon">🔗</span>
-                        <span class="article-platform">LinkedIn</span>
-                    </div>
-                    <div class="article-title">Content Discovery & Streaming Activity</div>
-                    <span class="article-link-text">Read Post →</span>
-                </a>
-
                 <a href="https://shrikant414.substack.com/p/how-we-scaled-josh-to-10-million" target="_blank" class="article-card">
                     <div class="article-meta">
                         <span class="article-icon">📄</span>
@@ -659,24 +564,6 @@
                     </div>
                     <div class="article-title">How We Scaled Josh to 10 Million DAU: Localization Lessons</div>
                     <span class="article-link-text">Read Article →</span>
-                </a>
-
-                <a href="https://shrikant414.substack.com/p/from-zero-to-one-building-innovative" target="_blank" class="article-card">
-                    <div class="article-meta">
-                        <span class="article-icon">🚀</span>
-                        <span class="article-platform">Substack</span>
-                    </div>
-                    <div class="article-title">From Zero to One: Building Innovative Products That Scale</div>
-                    <span class="article-link-text">Read Article →</span>
-                </a>
-
-                <a href="https://www.youtube.com/watch?v=R4AbQrHL77Q" target="_blank" class="article-card">
-                    <div class="article-meta">
-                        <span class="article-icon">▶️</span>
-                        <span class="article-platform">YouTube</span>
-                    </div>
-                    <div class="article-title">Webinar: Working Cross-Functionally as a PM (eBay)</div>
-                    <span class="article-link-text">Watch Video →</span>
                 </a>
 
                 <a href="https://shrikantkadu.medium.com/writing-product-vision-roadmap-documents-318f5a08f3ae" target="_blank" class="article-card">
@@ -688,15 +575,6 @@
                     <span class="article-link-text">Read Article →</span>
                 </a>
 
-                <a href="https://shrikantkadu.medium.com/vision-and-roadmap-of-an-ai-product-e4693c73d5a3" target="_blank" class="article-card">
-                    <div class="article-meta">
-                        <span class="article-icon">🤖</span>
-                        <span class="article-platform">Medium</span>
-                    </div>
-                    <div class="article-title">Vision and Roadmap of an AI product</div>
-                    <span class="article-link-text">Read Article →</span>
-                </a>
-
                 <a href="https://shrikantkadu.medium.com/building-a-stellar-team-of-product-managers-cd45b9c24a9c" target="_blank" class="article-card">
                     <div class="article-meta">
                         <span class="article-icon">👥</span>
@@ -705,25 +583,37 @@
                     <div class="article-title">Building a stellar team of product managers</div>
                     <span class="article-link-text">Read Article →</span>
                 </a>
+            </div>
+        </div>
+    </section>
 
-                <a href="https://shrikantkadu.medium.com/values-of-product-management-24be66b62e00" target="_blank" class="article-card">
-                    <div class="article-meta">
-                        <span class="article-icon">💡</span>
-                        <span class="article-platform">Medium</span>
+    <section id="podcast" class="podcast">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Beyond the Title</h2>
+                <p class="section-subtitle">A podcast uncovering the routines, skill sets, and actions that drive impact underneath job titles.</p>
+            </div>
+
+            <div class="episode-grid">
+                <a href="https://www.youtube.com/watch?v=R4AbQrHL77Q" target="_blank" class="episode-card">
+                    <img src="https://img.youtube.com/vi/R4AbQrHL77Q/maxresdefault.jpg" alt="Episode Thumbnail" class="episode-thumb">
+                    <div class="episode-body">
+                        <div class="episode-title">Decoding Cross-Functional Mastery</div>
+                        <p class="episode-desc">A deep dive into how PMs navigate ambiguity across engineering, design, and business teams at global scale.</p>
+                        <span class="btn-play">▶ Watch Episode</span>
                     </div>
-                    <div class="article-title">Values of Product Management</div>
-                    <span class="article-link-text">Read Article →</span>
                 </a>
 
-                <a href="https://www.linkedin.com/posts/shrikant-g-kadu_lenny-rachitsky-just-released-transcripts-activity-7417180487586144256-Pw-h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB9yxR0BGf2OraMD1nPKk6hnNVP3Vz_ssxk" target="_blank" class="article-card">
-                    <div class="article-meta">
-                        <span class="article-icon">🏗️</span>
-                        <span class="article-platform">LinkedIn</span>
+                <a href="https://www.youtube.com/@Beyond-The-Title" target="_blank" class="episode-card">
+                    <div class="episode-thumb" style="display: flex; align-items: center; justify-content: center; background: #eee;">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="#666"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                     </div>
-                    <div class="article-title">Building the Wisdom Wall: Synthesizing Lenny's Podcast Transcripts</div>
-                    <span class="article-link-text">Read Post →</span>
+                    <div class="episode-body" style="background: var(--text-main); color: white;">
+                        <div class="episode-title" style="color: white;">Browse All Episodes</div>
+                        <p class="episode-desc" style="color: #9CA3AF;">Catch the full series of conversations on YouTube, Spotify, and Apple Podcasts.</p>
+                        <span class="btn-play" style="color: white;">Visit Channel →</span>
+                    </div>
                 </a>
-
             </div>
         </div>
     </section>
@@ -784,15 +674,12 @@
                     <a href="https://www.linkedin.com/in/shrikant-g-kadu/" target="_blank" class="social-link" aria-label="LinkedIn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
-                    
                     <a href="https://x.com/shrikant_kadu" target="_blank" class="social-link" aria-label="X (Twitter)">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     </a>
-
                     <a href="https://shrikantkadu.medium.com/" target="_blank" class="social-link" aria-label="Medium">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0v24h24V0H0zm19.938 5.686L18.651 4.4a.79.79 0 0 0-.83.076l-2.69 1.917v10.56l2.673 2.657c.22.218.66.191.847-.053l1.287-1.754V5.686zm-12.245 1.6l-3.375-2.4a.79.79 0 0 0-.829-.076L2.2 5.927v12.117l1.287 1.754c.187.244.627.271.847.053l2.673-2.657V7.286h.686zm1.313 10.424l4.137-6.935L9.006 3.84v13.87z"/></svg>
                     </a>
-
                     <a href="https://www.youtube.com/@Beyond-The-Title" target="_blank" class="social-link" aria-label="YouTube">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                     </a>
@@ -802,15 +689,11 @@
     </footer>
 
     <script>
-        // --- 1. Menu Interactions ---
         const menuBtn = document.getElementById('menuToggle');
         const navMenu = document.getElementById('nav-menu');
         const navLinks = document.querySelectorAll('#nav-menu a');
 
-        menuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('mobile-open');
-        });
-
+        menuBtn.addEventListener('click', () => { navMenu.classList.toggle('mobile-open'); });
         document.addEventListener('click', (e) => {
             if (!navMenu.contains(e.target) && !menuBtn.contains(e.target) && navMenu.classList.contains('mobile-open')) {
                 navMenu.classList.remove('mobile-open');
@@ -818,14 +701,10 @@
         });
 
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('mobile-open');
-            });
+            link.addEventListener('click', () => { navMenu.classList.remove('mobile-open'); });
         });
 
-        // --- 2. Scroll Highlight ---
         const sections = document.querySelectorAll('section');
-        
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
@@ -842,7 +721,6 @@
             });
         });
 
-        // --- 3. Form Logic ---
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
@@ -851,7 +729,6 @@
             window.location.href = `mailto:shri.kadu13@gmail.com?subject=Contact from ${name}&body=${msg}%0D%0A%0D%0AFrom: ${email}`;
         });
 
-        // --- 4. 🖼️ HIGH-PERFORMANCE FLIP ANIMATION ---
         const trigger = document.getElementById('profileTrigger');
         const overlay = document.getElementById('overlay');
         const closeBtn = document.getElementById('closeOverlay');
@@ -872,7 +749,6 @@
             overlay.classList.add('active');
             document.body.classList.add('no-scroll');
             activeImage = clone;
-
             clone.getBoundingClientRect(); 
 
             const finalSize = Math.min(window.innerWidth * 0.8, 500);
@@ -896,7 +772,6 @@
             activeImage.style.width = `${rect.width}px`;
             activeImage.style.height = `${rect.height}px`;
             activeImage.style.borderRadius = '50%';
-
             setTimeout(() => {
                 if (activeImage) {
                     activeImage.remove();
@@ -907,18 +782,9 @@
         }
 
         closeBtn.addEventListener('click', closeImage);
-        overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) closeImage();
-        });
-        
-        window.addEventListener('scroll', () => {
-            if(activeImage) closeImage();
-        });
-        
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeImage();
-        });
-
+        overlay.addEventListener('click', (e) => { if (e.target === overlay) closeImage(); });
+        window.addEventListener('scroll', () => { if(activeImage) closeImage(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeImage(); });
     </script>
 </body>
 </html>

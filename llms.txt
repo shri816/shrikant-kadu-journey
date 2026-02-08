@@ -39,22 +39,33 @@
 * Keywords: AI/ML, NLP, B2B SaaS, 0-to-1.
 
 ## The Laboratory (Technical Projects)
+* **Forest Arena Fighter:** Browser-based fighter game experimenting with sprite animations, collision physics, and real-time state management.
+* **Wisdom Wall:** Curated wisdom graph synthesizing 250+ Lenny's Podcast transcripts into actionable product wisdom.
+* **Year in Progress:** Chrome extension visualizing the current year's progression.
 * **Screen Time Tracker:** Chrome extension for digital wellbeing and browsing habit visualization.
 * **Task Taker:** Context-aware browser utility for rapid task capture.
 * **CrunchyQR:** Aesthetic-focused QR code generator for styled link sharing.
 * **Stream Scout:** React-based content discovery portal for streaming platforms.
 * **TweetRadar:** Curation tool for surfacing high-signal social content.
 
+## Beyond the Title - Podcast & Videos
+A series uncovering the routines, skill sets, and actions that drive impact underneath job titles.
+* **Episode:** "He Spent ~10 Years at Google! Ex-Google UX Engineer's Biggest Career Lessons" — https://www.youtube.com/watch?v=4heVbkLkC4s
+* **Episode:** "Beyond the Title of Sr. Software Development Engineer at Amazon US" — https://www.youtube.com/watch?v=biaEDWhBgsI
+* **Episode:** "Beyond the Title of Senior Consultant at Deloitte" — https://www.youtube.com/watch?v=WCOX_AX6Pm8
+* **Webinar:** "Working Cross-Functionally as a PM (eBay)" — https://www.youtube.com/watch?v=R4AbQrHL77Q
+* **YouTube Channel:** https://www.youtube.com/@Beyond-The-Title
+
 ## Selected Writing & Thought Leadership
 * **AI & Future of Work:** "The Future of Work and Human Value in an AI World" (Substack).
 * **Scaling Products:** "How We Scaled Josh to 10 Million DAU: Localization Lessons."
 * **Strategy:** "Vision and Roadmap of an AI product" and "Writing product vision & roadmap documents" (Medium).
 * **Leadership:** "Building a stellar team of product managers."
-* **Speaking:** "Working Cross-Functionally as a PM" (eBay/YouTube Webinar).
 
 ## Essential Links
 * **Website:** https://shri816.github.io/shrikant-kadu-journey/
 * **LinkedIn:** https://www.linkedin.com/in/shrikant-g-kadu/
 * **GitHub:** https://github.com/shri816
+* **YouTube:** https://www.youtube.com/@Beyond-The-Title
 * **Email:** shri.kadu13@gmail.com
 * **Twitter/X:** https://x.com/shrikant_kadu

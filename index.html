@@ -270,6 +270,9 @@
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .typed-wrapper { display: inline-block; min-width: 11ch; text-align: left; }
+        .typed-cursor { color: var(--primary); animation: blink 1s step-end infinite; font-weight: 400; }
     </style>
 </head>
 <body>
@@ -301,7 +304,7 @@
     <section class="hero">
         <div class="container hero-content">
             <h1>Built products on three continents <span style="-webkit-text-fill-color: initial;">🌍</span></h1>
-            <p class="tagline">Product Leader across Consumer, Fintech, Marketplace & AI</p>
+            <p class="tagline">Product Leader across <span class="typed-wrapper"><span id="typed-domain"></span><span class="typed-cursor">|</span></span></p>
             <p class="description">
                 From viral consumer apps to billion-dollar fintech platforms to marketplace infrastructure at scale, I've deliberately sought out different types of hard problems across three continents to build adaptability, not just expertise in one domain.
             </p>
@@ -381,6 +384,21 @@
             </div>
 
             <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-date">2025 - Present</span>
+                    <div class="timeline-content">
+                        <h3>Senior Product Manager</h3>
+                        <div class="timeline-company">Crunchyroll • Hyderabad, India</div>
+                        <p class="timeline-desc">First product hire for Crunchyroll in the Asia-Pacific region, driving international payments, checkout optimization, and subscriber growth across emerging markets.</p>
+                        <div class="tags">
+                            <span class="tag">Streaming</span>
+                            <span class="tag">Payments</span>
+                            <span class="tag">Growth</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-date">2024 - 2025</span>
@@ -463,10 +481,7 @@
             </div>
 
             <div class="disclaimer-box">
-                <span style="font-size: 1.5rem">🧪</span>
-                <div>
-                    <strong>Uncooked Ideas:</strong> These are prototypes I'm tinkering with. They aren't polished products; you might find bugs, but you'll also find fresh ideas.
-                </div>
+                Live experiments. Not polished products, but they all work, and they're all real.
             </div>
 
             <div class="prototype-grid">
@@ -494,6 +509,19 @@
                         <span class="tech-tag">LLM Analysis</span>
                         <span class="tech-tag">Vercel</span>
                         <span class="tech-tag">Product Ops</span>
+                    </div>
+                </a>
+
+                <a href="https://shri816.github.io/fundscan/" target="_blank" rel="noopener" class="prototype-card">
+                    <div class="prototype-header">
+                        <span class="prototype-title">FundScan</span>
+                        <span class="prototype-icon">📊</span>
+                    </div>
+                    <p class="prototype-desc">Your mutual fund portfolio's second opinion. Scan for hidden overlap, concentration risk, and wasted expense ratios across your holdings.</p>
+                    <div class="prototype-meta">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Data Viz</span>
                     </div>
                 </a>
 
@@ -566,18 +594,6 @@
                     <div class="prototype-meta">
                         <span class="tech-tag">Social</span>
                         <span class="tech-tag">Discovery</span>
-                    </div>
-                </a>
-
-                <a href="https://shri816.github.io/shrikant-kadu-journey/" target="_blank" class="prototype-card">
-                    <div class="prototype-header">
-                        <span class="prototype-title">Interactive Journey</span>
-                        <span class="prototype-icon">🗺️</span>
-                    </div>
-                    <p class="prototype-desc">A visual experiment in storytelling to showcase career progression.</p>
-                    <div class="prototype-meta">
-                        <span class="tech-tag">Web</span>
-                        <span class="tech-tag">Portfolio</span>
                     </div>
                 </a>
 
@@ -943,6 +959,38 @@
             if (e.key === 'Escape') closeImage();
         });
 
+    </script>
+
+    <script>
+        const domains = ['Consumer', 'Fintech', 'Marketplace', 'AI', 'Streaming'];
+        let domainIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+        const el = document.getElementById('typed-domain');
+
+        function type() {
+            const word = domains[domainIndex];
+            if (deleting) {
+                el.textContent = word.substring(0, charIndex--);
+            } else {
+                el.textContent = word.substring(0, charIndex++);
+            }
+
+            let delay = deleting ? 60 : 100;
+
+            if (!deleting && charIndex === word.length + 1) {
+                delay = 1800;
+                deleting = true;
+            } else if (deleting && charIndex === 0) {
+                deleting = false;
+                domainIndex = (domainIndex + 1) % domains.length;
+                delay = 300;
+            }
+
+            setTimeout(type, delay);
+        }
+
+        type();
     </script>
 </body>
 </html>

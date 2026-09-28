@@ -77,7 +77,7 @@
             --youtube-red: #FF0000;
         }
 
-        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
         body {
             font-family: 'Nunito', sans-serif;
             color: var(--text-main);
@@ -128,7 +128,6 @@
         /* ------------------------- 🏗️ GENERAL LAYOUT ------------------------- */
         .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
         section { padding: 6rem 0; }
-        section[id] { scroll-margin-top: 100px; }
 
         /* ------------------------- ✨ HERO ------------------------- */
         .hero { padding: 8rem 0 4rem 0; text-align: center; background: radial-gradient(50% 50% at 50% 50%, #FAFAFA 0%, #FFFFFF 100%); }
@@ -928,6 +927,24 @@
                 navMenu.classList.remove('mobile-open');
             });
         });
+
+        // --- 1b. Fix anchor scroll landing short on slow/mobile loads ---
+        // The browser jumps to the #hash target as soon as it's parsed, using
+        // whatever page height exists at that moment. On mobile, font swap-in
+        // (Nunito loading) and slower rendering mean the layout isn't settled
+        // yet, so the jump lands short and never self-corrects. Re-scroll once
+        // things actually settle.
+        function correctHashScroll() {
+            if (!location.hash) return;
+            const target = document.querySelector(location.hash);
+            if (target) target.scrollIntoView({ behavior: 'auto', block: 'start' });
+        }
+        window.addEventListener('load', () => {
+            requestAnimationFrame(() => requestAnimationFrame(correctHashScroll));
+        });
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(correctHashScroll);
+        }
 
         // --- 2. Scroll Highlight ---
         const sections = document.querySelectorAll('section');

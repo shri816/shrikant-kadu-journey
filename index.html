@@ -931,19 +931,29 @@
         // --- 1b. Fix anchor scroll landing short on slow/mobile loads ---
         // The browser jumps to the #hash target as soon as it's parsed, using
         // whatever page height exists at that moment. On mobile, font swap-in
-        // (Nunito loading) and slower rendering mean the layout isn't settled
-        // yet, so the jump lands short and never self-corrects. Re-scroll once
-        // things actually settle.
-        function correctHashScroll() {
-            if (!location.hash) return;
-            const target = document.querySelector(location.hash);
-            if (target) target.scrollIntoView({ behavior: 'auto', block: 'start' });
-        }
-        window.addEventListener('load', () => {
-            requestAnimationFrame(() => requestAnimationFrame(correctHashScroll));
-        });
-        if (document.fonts && document.fonts.ready) {
-            document.fonts.ready.then(correctHashScroll);
+        // (Nunito loading) and the URL bar collapsing keep shifting the layout
+        // for a few hundred ms after `load` fires, so a single correction gets
+        // undone. Keep re-correcting for a short settle window, and stop the
+        // moment the visitor actually takes control of the scroll.
+        if (location.hash) {
+            let userInteracted = false;
+            ['wheel', 'touchstart', 'keydown'].forEach(evt =>
+                window.addEventListener(evt, () => { userInteracted = true; }, { once: true, passive: true })
+            );
+
+            function correctHashScroll() {
+                if (userInteracted) return;
+                const target = document.querySelector(location.hash);
+                if (target) target.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }
+
+            window.addEventListener('load', () => {
+                requestAnimationFrame(() => requestAnimationFrame(correctHashScroll));
+                [150, 400, 800, 1200].forEach(delay => setTimeout(correctHashScroll, delay));
+            });
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(correctHashScroll);
+            }
         }
 
         // --- 2. Scroll Highlight ---
